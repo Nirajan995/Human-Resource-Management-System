@@ -1,0 +1,8 @@
+.bgimage{
+    /* background-image: url("./images/1345c34e01ad1825f6c5725364cc0d8a.jpg"); */
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-size: contain;
+}
+

@@ -1,0 +1,34 @@
+*{
+  border: none;
+}
+/* .headerlogodiv {
+  background-color: #333333;
+  height: 200px;
+  
+} */
+
+/* .finallogo{
+
+} */
+/* 
+.leftlogo {
+  background-image: url("Untitled-1.png");
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 15%;
+} */
+/* .rightlogo {
+  background-image: url("finallogo1.png");
+} */
+
+.headerfinal{
+  
+  /* background-image: url("finalheader.jpg"); */
+  background-size: contain;
+  width: 100%;
+  height: 193px;
+  display: block;
+  background-repeat: none;
+}
