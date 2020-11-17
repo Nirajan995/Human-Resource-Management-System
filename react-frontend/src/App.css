@@ -8,6 +8,14 @@ label {
   padding: 40px 40px;
 }
 
+.navbar {
+  background-color: 	#696969;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 .card {
   background-color: #f7f7f7;
   padding: 20px 25px 30px;
@@ -29,4 +37,23 @@ label {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+.nav-item{
+  border-radius: 4px;
+  margin: 15px;
+  font-weight: bold;
+  
+}
+
+.nav-item:hover{
+  background-color: #4285F4;
+  font-weight: bolder;
+  color: aliceblue;
+  transition: all 0.9s;
+
+
+
+}
+.navbar{
+  margin: 0px;
 }

@@ -6,7 +6,6 @@ import Admin from "./components/Admin.js";
 
 import AuthService from "./services/auth.service";
 import Header from "./header/HeaderLogo";
-import Navbar from "./navbarcomponents/pages/Navbar";
 
 import Login from "./components/login.component";
 import Register from "./components/register.component";
@@ -16,6 +15,7 @@ import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 import FooterComp from "./Footer/FooterComp";
+import AddEmployee from "./components/AddEmployee"
 
 class App extends Component {
   constructor(props) {
@@ -53,8 +53,8 @@ class App extends Component {
         <header>
           <Header></Header>
         </header>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <Link to={"/"} className="navbar-brand">
+        <nav className="navbar navbar-expand navbar-dark">
+        <Link to={"/"} className="navbar-brand">
             KANN
           </Link>
           <div className="navbar-nav mr-auto">
@@ -128,8 +128,11 @@ class App extends Component {
             <Route path="/user" component={BoardUser} />
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={Admin} />
+            <Route exact path="/addemp" component={AddEmployee} />
+
           </Switch>
         </div>
+        <FooterComp />
       </div>
     );
   }
