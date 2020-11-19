@@ -7,7 +7,7 @@
 .divcomp {
   height: 400px;
   width: 100%;
-  background-color: greenyellow;
+  background-color: rgb(252, 252, 252);
   position: relative;
   top: 0px;
   background-image: url("./images/prediction.jpg");
