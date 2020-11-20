@@ -3,6 +3,8 @@ import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Admin from "./components/Admin.js";
+import Employee from "./components/Employee";
+import User from "./components/User";
 
 import AuthService from "./services/auth.service";
 import Header from "./header/HeaderLogo";
@@ -119,7 +121,7 @@ class App extends Component {
           )}
         </nav>
 
-        <div className="container mt-3">
+        <div>
           <Switch>
             <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
@@ -129,7 +131,8 @@ class App extends Component {
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={Admin} />
             <Route exact path="/addemp" component={AddEmployee} />
-
+            <Route path="/employee" component={Employee} />
+            <Route path="/user" component={User} />
           </Switch>
         </div>
         <FooterComp />

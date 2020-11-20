@@ -6,7 +6,7 @@ import Dashboard from "../Dashboard/Dashboardtoggler"
 function Admin() {
   return (
     <div>
-     
+      
       <Dashboard/>
      
     
