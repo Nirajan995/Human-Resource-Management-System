@@ -17,7 +17,6 @@ import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 import FooterComp from "./Footer/FooterComp";
-import AddEmployee from "./components/AddEmployee"
 
 class App extends Component {
   constructor(props) {
@@ -56,7 +55,7 @@ class App extends Component {
           <Header></Header>
         </header>
         <nav className="navbar navbar-expand navbar-dark">
-        <Link to={"/"} className="navbar-brand">
+          <Link to={"/"} className="navbar-brand">
             KANN
           </Link>
           <div className="navbar-nav mr-auto">
@@ -130,7 +129,6 @@ class App extends Component {
             <Route path="/user" component={BoardUser} />
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={Admin} />
-            <Route exact path="/addemp" component={AddEmployee} />
             <Route path="/employee" component={Employee} />
             <Route path="/user" component={User} />
           </Switch>
