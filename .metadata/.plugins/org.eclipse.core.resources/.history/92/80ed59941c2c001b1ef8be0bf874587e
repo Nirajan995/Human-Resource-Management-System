@@ -1,0 +1,42 @@
+package com.hrms.rest.application.services;
+	
+
+public class PredictionService {
+	public static final String BEST = "Best";
+	public static final String BETTER = "Better";
+	public static final String OK = "Ok";
+	public static final String BAD = "Bad";
+	static final String[] colName = {
+	    "Behaviour with Colleagues", 
+	    "Level of creativity",
+	    "Attendance",
+	    "Project Punctuality",
+	    "Project Quality",
+	    "Performance"};
+	
+	public static final String[][] data = {
+			
+			
+			
+	        {"Less Cooperative"  , "Highly-Creative", "Mostly Present", "Occasionally late", "Beyond Expectation","Best"},
+	        {"Cooperative" 	     ,	"Less-Creative"  , "Rarely Absent",  "OnTime", "Little Below Expectation","Best"},
+	        {"Less Cooperative"  , "Creative", "Mostly Present", "Occasionally late", "Below Expectation","Better"},
+	        {"Cooperative"       , "Less-Creative", "Sometimes Absent", "Rarely late", "Little Below Expectation","Better"},
+	        {"Highly Cooperative", "Creative", "Mostly Present", "OnTime", "Beyond Expectation","Better"},
+	        {"Highly Cooperative", "Not-Creative", "Frequently Absent", "Occasionally late", "Little Below Expectation","Better"},
+	        {"Less Cooperative"  , "Less-Creative", "Rarely Absent", "Rarely late", "Beyond Expectation","Better"},
+	        {"Cooperative"       , "Creative", "Sometimes Absent", "Mostly late", "As Expected","Better"},
+	        {"Less Cooperative"  , "Less-Creative", "Rarely Absent", "Mostly late", "Little Below Expectation","Better"},
+	        {"Not Cooperative"   , "Creative", "Mostly Present", "OnTime", "Little Below Expectation","Better"},
+	        {"Less Cooperative"  , "Less-Creative", "Mostly Present", "Occasionally late", "Below Expectation","Better"},
+	        {"Less Cooperative"  , "Highly-Creative", "Frequently Absent", "Occasionally late", "As expected","Better"},
+	        {"Less Cooperative"  , "Creative", "Sometimes Absent", "Occasionally late", "Beyond Expectation","Better"},
+	        {"Highly Cooperative", "Creative", "Sometimes Absent", "Rarely late", "Beyond Expectation","Better"},
+	        {"Cooperative"       , "Less-Creative", "Mostly Present", "OnTime", "Little Below Expectation","Better"},
+	        {"Highly Cooperative", "Highly-Creative", "Sometimes Absent", "Mostly late", "As Expected","Better"},
+	        {"Less Cooperative"  , "Creative", "Sometimes Absent", "Occasionally late", "Little Below Expectation","Better"},
+	        {"Not Cooperative"   , "Less-Creative", "Rarely Absent", "Rarely late", "As Expected","Better"},
+	        {"Less Cooperative"  , "Not-Creative", "Sometimes Absent", "Rarely late", "As Expected","Better"},
+	        {"Not Cooperative"   , "Less-Creative", "Frequently Absent", "Occasionally late", "Little Below Expectation","Better"},
+	        };
+}

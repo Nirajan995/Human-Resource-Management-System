@@ -1,15 +1,11 @@
 import React from "react";
 import "../App.css";
-import Dashboard from "../Dashboard/Dashboardtoggler"
-
+import Dashboard from "../Dashboard/Dashboardtoggler";
 
 function Admin() {
   return (
     <div>
-      
-      <Dashboard/>
-     
-    
+      <Dashboard />
     </div>
   );
 }

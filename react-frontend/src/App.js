@@ -69,8 +69,8 @@ class App extends Component {
 
             {showModeratorBoard && (
               <li className="nav-item">
-                <Link to={"/mod"} className="nav-link">
-                  Moderator Board
+                <Link to={"/employee"} className="nav-link">
+                  Employee Board
                 </Link>
               </li>
             )}
@@ -124,11 +124,7 @@ class App extends Component {
 
         <div>
           <Switch>
-            <Route
-              exact
-              path={["/", "/home"]}
-              component={ListEmployeesComponent}
-            />
+            <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
@@ -136,6 +132,12 @@ class App extends Component {
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={Admin} />
             <Route path="/employee" component={Employee} />
+            <Route
+              exact
+              path="/add-employees"
+              component={CreateEmployeeComponent}
+            />
+            <Route exact path="/employees" component={ListEmployeesComponent} />
             <Route path="/user" component={User} />
           </Switch>
         </div>

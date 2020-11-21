@@ -1,0 +1,103 @@
+package com.hrms.rest.application.services;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+
+import com.hrms.rest.application.test.NaiveBayesTest;
+import com.namsor.oss.classify.bayes.ClassifyException;
+import com.namsor.oss.classify.bayes.IClassification;
+import com.namsor.oss.classify.bayes.IClassificationExplained;
+import com.namsor.oss.classify.bayes.NaiveBayesClassifierMapImpl;
+import com.namsor.oss.classify.bayes.NaiveBayesExplainerImpl;
+import com.namsor.oss.classify.bayes.PersistentClassifierException;
+
+public class PredictionService {
+	public static final String BEST = "Best";
+	public static final String BETTER = "Better";
+	public static final String OK = "Ok";
+	public static final String BAD = "Bad";
+	static final String[] colName = { "Behaviour-with-Colleagues", "Level-of-creativity", "Attendance",
+			"Project-Punctuality", "Project-Quality", "Performance" };
+
+	public static final String[][] data = {
+
+			{ "Less-Cooperative", "Highly-Creative", "Mostly Present", "Occasionally-late", "Beyond-Expectation",
+					"Best" },
+			{ "Cooperative", "Less-Creative", "Rarely-Absent", "OnTime", "Little-Below-Expectation", "Best" },
+			{ "Less-Cooperative", "Creative", "Mostly Present", "Occasionally-late", "Below Expectation", "Ok" },
+			{ "Cooperative", "Less-Creative", "Sometimes-Absent", "Rarely-late", "Little-Below-Expectation", "Better" },
+			{ "Highly-Cooperative", "Creative", "Mostly Present", "OnTime", "Beyond-Expectation", "Best" },
+			{ "Highly-Cooperative", "Not-Creative", "Frequently-Absent", "Occasionally-late",
+					"Little-Below-Expectation", "Ok" },
+			{ "Less-Cooperative", "Less-Creative", "Rarely-Absent", "Rarely-late", "Beyond-Expectation", "Better" },
+			{ "Cooperative", "Creative", "Sometimes-Absent", "Mostly-late", "As-Expected", "Ok" },
+			{ "Less-Cooperative", "Less-Creative", "Rarely-Absent", "Mostly-late", "Little-Below-Expectation", "Bad" },
+			{ "Not-Cooperative", "Creative", "Mostly Present", "OnTime", "Little-Below-Expectation", "Better" },
+			{ "Less-Cooperative", "Less-Creative", "Mostly Present", "Occasionally-late", "Below Expectation", "Bad" },
+			{ "Less-Cooperative", "Highly-Creative", "Frequently-Absent", "Occasionally-late", "As-Expected", "Ok" },
+			{ "Less-Cooperative", "Creative", "Sometimes-Absent", "Occasionally-late", "Beyond-Expectation", "Better" },
+			{ "Highly-Cooperative", "Creative", "Sometimes-Absent", "Rarely-late", "Beyond-Expectation", "Best" },
+			{ "Cooperative", "Less-Creative", "Mostly Present", "OnTime", "Little-Below-Expectation", "Better" },
+			{ "Highly-Cooperative", "Highly-Creative", "Sometimes-Absent", "Mostly-late", "As-Expected", "Better" },
+			{ "Less-Cooperative", "Creative", "Sometimes-Absent", "Occasionally-late", "Little-Below-Expectation",
+					"Ok" },
+			{ "Not-Cooperative", "Less-Creative", "Rarely-Absent", "Rarely-late", "As-Expected", "Ok" },
+			{ "Less-Cooperative", "Not-Creative", "Sometimes-Absent", "Rarely-late", "As-Expected", "Ok" },
+			{ "Not-Cooperative", "Less-Creative", "Frequently-Absent", "Occasionally-late", "Little-Below-Expectation",
+					"Bad" }, };
+
+	public static final void main(String[] args) {
+
+		try {
+			String[] cats = { BEST, OK, BETTER, BAD };
+			NaiveBayesClassifierMapImpl bayes = new NaiveBayesClassifierMapImpl("Performance", cats);
+
+			for (int i = 0; i < data.length; i++) {
+				Map<String, String> features = new HashMap<>();
+				for (int j = 0; j < colName.length - 1; j++) {
+					features.put(colName[j], data[i][j]);
+				}
+				// learn ex. Category=Yes Conditions=Sunny, Cool, Normal and Weak.
+				bayes.learn(data[i][colName.length - 1], features);
+			}
+
+			Map<String, String> features = new HashMap<>();
+			Less-Cooperative", "Highly-Creative", "
+					+ ""Mostly Present", "Occasionally-late", "Beyond-Expectation
+			features.put("Behaviour-with-Colleagues", "Less-Cooperative");
+			features.put("Level-of-Creativity", "Highly-Creative");
+			features.put("Attendance", "Mostly Present");
+			features.put("Project-Punctuality", "Occasionally-late);
+			features.put("Project-Quality", "Beyond-Expectation");
+
+			// Shall we play given weather conditions Sunny, Cool, Rainy and Windy ?
+			IClassification predict = bayes.classify(features, true);
+			for (int i = 0; i < predict.getClassProbabilities().length; i++) {
+				System.out.println("P(" + predict.getClassProbabilities()[i].getCategory() + ")="
+						+ predict.getClassProbabilities()[i].getProbability());
+			}
+			if (predict.getExplanationData() != null) {
+				NaiveBayesExplainerImpl explainer = new NaiveBayesExplainerImpl();
+				IClassificationExplained explained = explainer.explain(predict);
+				System.out.println(explained.toString());
+
+				ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
+				ScriptEngine scriptEngine = scriptEngineManager.getEngineByName("JavaScript");
+				// JavaScript code from String
+				Double proba = (Double) scriptEngine.eval(explained.toString());
+				System.out.println("Result of evaluating mathematical expressions in String = " + proba);
+			}
+		} catch (PersistentClassifierException ex) {
+			Logger.getLogger(PredictionService.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (ClassifyException ex) {
+			Logger.getLogger(PredictionService.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (Throwable ex) {
+			Logger.getLogger(PredictionService.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+}

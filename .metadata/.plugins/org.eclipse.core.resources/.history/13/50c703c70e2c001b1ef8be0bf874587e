@@ -1,0 +1,9 @@
+package com.hrms.rest.application.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.hrms.rest.application.models.Payroll;
+
+public interface PayrollRepository {
+
+}

@@ -1,0 +1,9 @@
+package com.hrms.rest.application.services;
+
+public class PredictionService {
+	public static final String YES = "Yes";
+    public static final String NO = "No";
+    static final String[] colName = {
+        "outlook", "temp", "humidity", "wind", "play"
+    };
+}
