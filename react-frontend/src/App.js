@@ -15,8 +15,10 @@ import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
-import BoardAdmin from "./components/board-admin.component";
 import FooterComp from "./Footer/FooterComp";
+
+import CreateEmployeeComponent from "./components/CreateEmployeeComponent.jsx";
+import ListEmployeesComponent from "./components/ListEmployeesComponent.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -122,7 +124,11 @@ class App extends Component {
 
         <div>
           <Switch>
-            <Route exact path={["/", "/home"]} component={Home} />
+            <Route
+              exact
+              path={["/", "/home"]}
+              component={CreateEmployeeComponent}
+            />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
