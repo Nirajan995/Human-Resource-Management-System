@@ -92,11 +92,11 @@ public class NaiveBayesTest {
                 System.out.println("Result of evaluating mathematical expressions in String = " + proba);
             }
         } catch (PersistentClassifierException ex) {
-            Logger.getLogger(MainSample1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NaiveBayesTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassifyException ex) {
-            Logger.getLogger(MainSample1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NaiveBayesTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Throwable ex) {
-            Logger.getLogger(MainSample1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NaiveBayesTest.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
