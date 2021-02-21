@@ -37,7 +37,7 @@ export default function Dashboardtoggler() {
           </div>
           <div className="list1">
             
-              <Link to="/empmgmt" style={{ textDecoration: 'none' }} className="linkitem1">
+              <Link to="/employees" style={{ textDecoration: 'none' }} className="linkitem1">
                  <div><BsIcons.BsPeopleFill /></div><div>&emsp; Employee Management</div>
               </Link>
             

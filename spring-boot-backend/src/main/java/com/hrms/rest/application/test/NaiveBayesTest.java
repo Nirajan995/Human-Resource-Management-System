@@ -1,6 +1,5 @@
 package com.hrms.rest.application.test;
 
-
 import com.namsor.oss.classify.bayes.ClassifyException;
 import com.namsor.oss.classify.bayes.NaiveBayesClassifierMapImpl;
 import com.namsor.oss.classify.bayes.PersistentClassifierException;
@@ -13,7 +12,6 @@ import com.namsor.oss.classify.bayes.IClassificationExplained;
 import com.namsor.oss.classify.bayes.NaiveBayesExplainerImpl;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
-
 
 public class NaiveBayesTest {
 
@@ -69,7 +67,7 @@ public class NaiveBayesTest {
                 NaiveBayesExplainerImpl explainer = new NaiveBayesExplainerImpl();
                 IClassificationExplained explained = explainer.explain(predict);
                 System.out.println(explained.toString());
-
+                
                 ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
                 ScriptEngine scriptEngine = scriptEngineManager.getEngineByName("JavaScript");
                 // JavaScript code from String

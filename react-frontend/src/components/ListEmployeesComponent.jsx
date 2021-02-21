@@ -16,17 +16,36 @@ export default class ListEmployeesComponent extends Component {
     this.props.history.push("/add-employees");
   };
 
+  editEmployee = (id) => {
+    this.props.history.push(`/update-employees/${id}`);
+  };
+
+  deleteEmployee = (id) => {
+    EmployeeService.deleteEmployee(id).then((resp) => {
+      this.setState({
+        employees: this.state.employees.filter((employee) => employee.id !== id),
+      });
+    });
+  };
+
   render() {
     return (
       <div>
         <h2 className="text-center">Employees List</h2>
         <div className="row">
-          <button className="btn btn-primary" onClick={this.addEmployee}>
+          <button
+            className="btn btn-primary"
+            onClick={this.addEmployee}
+            style={{ marginLeft: "20px" }}
+          >
             Add Employee
           </button>
         </div>
         <div className="row">
-          <table className="table table-striped table-bordered">
+          <table
+            className="table table-striped table-bordered"
+            style={{ margin: "20px" }}
+          >
             <thead>
               <tr>
                 <th>Employee First Name</th>
@@ -49,6 +68,23 @@ export default class ListEmployeesComponent extends Component {
                   <td>{employee.address}</td>
                   <td>{employee.phone_no}</td>
                   <td>{employee.hireDate}</td>
+                  <td>
+                    <button
+                      type="button"
+                      onClick={() => this.editEmployee(employee.id)}
+                      className="btn btn-outline-info "
+                    >
+                      Update
+                    </button>
+                    <button
+                      style={{ marginLeft: "5px" }}
+                      type="button"
+                      onClick={() => this.deleteEmployee(employee.id)}
+                      className="btn btn-outline-danger "
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -2,12 +2,16 @@ package com.hrms.rest.application.models;
 
 import java.sql.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "employees")
@@ -26,9 +30,21 @@ public class Employees {
 	private String phone_no;
 	@Column(name = "hireDate")
 	private Date hireDate;
-	
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "payroll_id", referencedColumnName = "payroll_id")
+	private Payroll payroll;
+
 	public Employees() {
-		
+
+	}
+
+	public Payroll getPayroll() {
+		return payroll;
+	}
+
+	public void setPayroll(Payroll payroll) {
+		this.payroll = payroll;
 	}
 
 	public Employees(String firstName, String lastName, int age, String email, String address, String phone_no,
@@ -107,7 +123,4 @@ public class Employees {
 		this.hireDate = hireDate;
 	}
 
-	
-
-	
 }

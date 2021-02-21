@@ -13,6 +13,23 @@ class EmployeeService {
       headers: authHeader(),
     });
   }
+
+  getEmployeeById(id) {
+    return axios.get(Employee_Api_Base_URL + "/" + id, {
+      headers: authHeader(),
+    });
+  }
+
+  updateEmployee(id, employee) {
+    return axios.put(Employee_Api_Base_URL + "/" + id, employee, {
+      headers: authHeader(),
+    });
+  }
+  deleteEmployee(id) {
+    return axios.delete(Employee_Api_Base_URL + "/" + id, {
+      headers: authHeader(),
+    });
+  }
 }
 
 export default new EmployeeService();

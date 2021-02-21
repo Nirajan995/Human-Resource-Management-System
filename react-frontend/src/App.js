@@ -19,6 +19,9 @@ import FooterComp from "./Footer/FooterComp";
 
 import CreateEmployeeComponent from "./components/CreateEmployeeComponent.jsx";
 import ListEmployeesComponent from "./components/ListEmployeesComponent.jsx";
+import UpdateEmployeeComponent from "./components/UpdateEmployeeComponent.jsx";
+import ListPayrollComponent from "./components/ListPayrollComponent";
+import PredictionComponent from "./components/prediction/PredictionComponent";
 
 class App extends Component {
   constructor(props) {
@@ -138,6 +141,13 @@ class App extends Component {
               component={CreateEmployeeComponent}
             />
             <Route exact path="/employees" component={ListEmployeesComponent} />
+            <Route exact path="/prediction" component={PredictionComponent} />
+            <Route exact path="/payrolls" component={ListPayrollComponent} />
+            <Route
+              exact
+              path="/update-employees/:id"
+              component={UpdateEmployeeComponent}
+            />
             <Route path="/user" component={User} />
           </Switch>
         </div>
