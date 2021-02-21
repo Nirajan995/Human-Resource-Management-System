@@ -31,7 +31,7 @@ export default class CreateEmployeeComponent extends Component {
     console.log("employee=>" + JSON.stringify(employee));
 
     EmployeeService.createEmployee(employee).then((resp) => {
-      this.props.history.push("/");
+      this.props.history.push("/employees");
     });
   };
   cancel = () => {
@@ -42,7 +42,7 @@ export default class CreateEmployeeComponent extends Component {
     return (
       <div>
         <h3 className="text-center">Add Employee</h3>
-        <Form>
+        <Form style={{ margin: "20px" }}>
           <Form.Row>
             <Col>
               <Form.Label>First Name</Form.Label>

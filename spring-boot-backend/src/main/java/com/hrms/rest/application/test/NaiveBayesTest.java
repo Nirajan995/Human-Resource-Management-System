@@ -1,6 +1,5 @@
 package com.hrms.rest.application.test;
 
-
 import com.namsor.oss.classify.bayes.ClassifyException;
 import com.namsor.oss.classify.bayes.NaiveBayesClassifierMapImpl;
 import com.namsor.oss.classify.bayes.PersistentClassifierException;
@@ -14,28 +13,14 @@ import com.namsor.oss.classify.bayes.NaiveBayesExplainerImpl;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
-/**
- * Simple example of Naive Bayes Classification (Sport / No Sport) inspired by
- * http://ai.fon.bg.ac.rs/wp-content/uploads/2015/04/ML-Classification-NaiveBayes-2014.pdf
- *
- * @author elian
- */
 public class NaiveBayesTest {
 
     public static final String YES = "Yes";
     public static final String NO = "No";
-    /**
-     * Header table as per https://taylanbil.github.io/boostedNB or
-     * http://ai.fon.bg.ac.rs/wp-content/uploads/2015/04/ML-Classification-NaiveBayes-2014.pdf
-     */
-    public static final String[] colName = {
+    static final String[] colName = {
         "outlook", "temp", "humidity", "wind", "play"
     };
 
-    /**
-     * Data table as per https://taylanbil.github.io/boostedNB or
-     * http://ai.fon.bg.ac.rs/wp-content/uploads/2015/04/ML-Classification-NaiveBayes-2014.pdf
-     */
     public static final String[][] data = {
         {"Sunny", "Hot", "High", "Weak", "No"},
         {"Sunny", "Hot", "High", "Strong", "No"},
@@ -56,10 +41,8 @@ public class NaiveBayesTest {
 
         try {
             String[] cats = {YES, NO};
-            // Create a new bayes classifier with string categories and string features.
             NaiveBayesClassifierMapImpl bayes = new NaiveBayesClassifierMapImpl("tennis", cats);
             
-            // Examples to learn from.
             for (int i = 0; i < data.length; i++) {
                 Map<String, String> features = new HashMap<>();
                 for (int j = 0; j < colName.length - 1; j++) {
@@ -84,7 +67,7 @@ public class NaiveBayesTest {
                 NaiveBayesExplainerImpl explainer = new NaiveBayesExplainerImpl();
                 IClassificationExplained explained = explainer.explain(predict);
                 System.out.println(explained.toString());
-
+                
                 ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
                 ScriptEngine scriptEngine = scriptEngineManager.getEngineByName("JavaScript");
                 // JavaScript code from String
