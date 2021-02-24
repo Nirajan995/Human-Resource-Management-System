@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import TodoList from './components/TodoList';
 import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
-import * as FaIcons from 'react-icons/fa';
-import * as RiIcons from 'react-icons/ri';
 import * as BiIcons from 'react-icons/bi';
 import * as MdIcons from 'react-icons/md';
 import * as GoIcons from 'react-icons/go';
@@ -40,17 +38,17 @@ function EmpDashboard() {
             
          
               <Link to="/projectmgmt" style={{ textDecoration: 'none' }} className="linkitem">
-              <div><BiIcons.BiTask /></div><div>&emsp; View Projects </div></Link>
+              <div className="listicons"><BiIcons.BiTask /></div><div>&emsp; View Projects </div></Link>
            
           
               <Link to="/querysubmit" style={{ textDecoration: 'none' }} className="linkitem">
-              <div><GoIcons.GoReport /></div><div>&emsp; Submit Query</div></Link>
+              <div className="listicons"><GoIcons.GoReport /></div><div>&emsp; Submit Query</div></Link>
 
               <Link to="/support" style={{ textDecoration: 'none' }} className="linkitem">
-              <div><MdIcons.MdContactPhone /></div><div>&emsp; Support</div></Link>
+              <div className="listicons"><MdIcons.MdContactPhone /></div><div>&emsp; Support</div></Link>
             
               <Link to="/about" style={{ textDecoration: 'none' }} className="linkitem">
-              <div><BsIcons.BsFillInfoSquareFill/></div><div>&emsp; About</div></Link>
+              <div className="listicons"><BsIcons.BsFillInfoSquareFill/></div><div>&emsp; About</div></Link>
             
             
           </div>

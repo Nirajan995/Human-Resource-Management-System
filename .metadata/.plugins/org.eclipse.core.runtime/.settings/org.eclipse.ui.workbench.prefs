@@ -18,6 +18,12 @@ org.eclipse.jface.textfont=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0
 org.eclipse.pde.internal.ui.compare.ManifestContentMergeViewer=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.pde.internal.ui.compare.PluginContentMergeViewer=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands/>
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=255,255,255
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=255,255,255
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_TEXT_COLOR=16,16,16
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_END=255,255,255
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=255,255,255
+org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=242,242,242
 org.eclipse.wst.jsdt.internal.ui.compare.JavaMergeViewer=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.wst.jsdt.ui.editors.textfont=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.wst.sse.ui.textfont=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;

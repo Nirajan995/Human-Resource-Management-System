@@ -9,6 +9,7 @@ import * as MdIcons from 'react-icons/md';
 
 
 
+
 export default function Dashboardtoggler() {
   let time = new Date().toLocaleTimeString();
   let date = new Date().toLocaleDateString();
@@ -46,7 +47,7 @@ export default function Dashboardtoggler() {
               <div><RiIcons.RiMoneyDollarBoxLine /></div><div>&emsp; Payroll Management</div></Link>
             
            
-              <Link to="/performancemgmt" style={{ textDecoration: 'none' }} className="linkitem1">
+              <Link to="/prediction" style={{ textDecoration: 'none' }} className="linkitem1">
               <div><FaIcons.FaChartLine /></div><div>&emsp; Performance Prediction</div></Link>
             
          

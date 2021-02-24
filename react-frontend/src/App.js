@@ -16,6 +16,7 @@ import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import FooterComp from "./Footer/FooterComp";
+import AboutPage from "./Dashboard/AboutPage";
 
 import CreateEmployeeComponent from "./components/CreateEmployeeComponent.jsx";
 import ListEmployeesComponent from "./components/ListEmployeesComponent.jsx";
@@ -124,14 +125,13 @@ class App extends Component {
             </div>
           )}
         </nav>
-
         <div>
           <Switch>
             <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
-            <Route path="/user" component={BoardUser} />
+            <Route path="/user" component={User} />
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={Admin} />
             <Route path="/employee" component={Employee} />
@@ -148,9 +148,11 @@ class App extends Component {
               path="/update-employees/:id"
               component={UpdateEmployeeComponent}
             />
-            <Route path="/user" component={User} />
+           
           </Switch>
         </div>
+        <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/support" component={AboutPage} />
         <FooterComp />
       </div>
     );

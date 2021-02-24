@@ -1,9 +1,10 @@
 import React from 'react'
+import Userdashboard from "./Userdashboard"
 
 function User() {
     return (
         <div>
-            123
+            <Userdashboard />
         </div>
     )
 }
