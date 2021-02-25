@@ -21,12 +21,12 @@ export default class PredictionComponent extends Component {
       labels: ["P(bad)", "P(Best)", "P(Better)", "P(Ok)"],
       datasets: [
         {
-          label: "Performance Prediction of Employees",
+          label: "Performance Prediction of Employees in percentage(%)",
           data: [
-            this.state.dataValues[0],
-            this.state.dataValues[1],
-            this.state.dataValues[2],
-            this.state.dataValues[3],
+            this.state.dataValues[0] * 100,
+            this.state.dataValues[1] * 100,
+            this.state.dataValues[2] * 100,
+            this.state.dataValues[3] * 100,
           ],
           borderColor: ["rgba(189, 195, 199, 1)"],
           backgroundColor: ["rgba(218, 223, 225, 1)"],
@@ -40,12 +40,12 @@ export default class PredictionComponent extends Component {
       labels: ["P(bad)", "P(Best)", "P(Better)", "P(Ok)"],
       datasets: [
         {
-          label: "Performance Prediction of Employees",
+          label: "Performance Prediction of Employees in percentage(%)",
           data: [
-            this.state.dataValues[0],
-            this.state.dataValues[1],
-            this.state.dataValues[2],
-            this.state.dataValues[3],
+            this.state.dataValues[0] * 100,
+            this.state.dataValues[1] * 100,
+            this.state.dataValues[2] * 100,
+            this.state.dataValues[3] * 100,
           ],
           borderColor: [
             "rgba(36, 37, 42, 1)",
@@ -72,8 +72,8 @@ export default class PredictionComponent extends Component {
           {
             ticks: {
               min: 0,
-              max: 1,
-              stepSize: 0.1,
+              max: 100,
+              stepSize: 10,
             },
           },
         ],
@@ -89,8 +89,8 @@ export default class PredictionComponent extends Component {
           {
             ticks: {
               min: 0,
-              max: 1,
-              stepSize: 0.01,
+              max: 100,
+              stepSize: 10,
             },
           },
         ],
@@ -103,31 +103,12 @@ export default class PredictionComponent extends Component {
     };
 
     return (
-      <div>
-        {console.log(this.state.dataValues)}
-        <h2>Predicted Data</h2>
-        <div className="row">
-          <table
-            className="table table-striped table-bordered"
-            style={{ margin: "20px" }}
-          >
-            <thead>
-              <tr>
-                {this.state.dataValues ? (
-                  <h1>{JSON.stringify(this.state.dataValues)}</h1>
-                ) : (
-                  ""
-                )}
-                <th>{JSON.stringify(this.state.prediction)}</th>
-                <th>Employee Age</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <div>
-              <Line data={data} options={options} />
-              <Bar data={datas} options={option} />
-            </div>
-          </table>
+      <div className="container">
+        <div>
+          <Line data={data} options={options} />
+        </div>
+        <div>
+          <Bar data={datas} options={option} />
         </div>
       </div>
     );

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.hrms.rest.application.security.jwt.JwtUtils"/>
     <fullyQualifiedTypeName name="com.hrms.rest.application.security.services.UserDetailsImpl"/>
     <fullyQualifiedTypeName name="com.hrms.rest.application.payload.response.JwtResponse"/>
     <fullyQualifiedTypeName name="org.springframework.security.authentication.AuthenticationManager"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.hrms.rest.application.security.services.UserDetailedServiceImpl"/>
     <fullyQualifiedTypeName name="com.hrms.rest.application.repositories.UserRepository"/>
     <fullyQualifiedTypeName name="com.hrms.rest.application.payload.request.SignupRequest"/>
@@ -51,13 +49,15 @@
     <fullyQualifiedTypeName name="com.hrms.rest.application.models.Payroll"/>
     <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="com.hrms.rest.application.services.PredictionService"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.hrms.rest.application.models.Prediction"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.hrms.rest.application.services.PredictionService"/>
+    <fullyQualifiedTypeName name="com.hrms.rest.application.controllers.PredictionController"/>
+    <fullyQualifiedTypeName name="com.hrms.rest.application.models.Prediction"/>
 </qualifiedTypeNameHistroy>

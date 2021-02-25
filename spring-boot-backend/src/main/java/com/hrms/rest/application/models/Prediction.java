@@ -1,47 +1,66 @@
 package com.hrms.rest.application.models;
 
+
 public class Prediction {
-	
-	private String best;
-	private String better;
-	private String ok;
-	private String bad;
-	
+
+	private String behaviourWithColleagues;
+	private String levelOfCreativity;
+	private String attendance;
+	private String projectPunctuality;
+	private String projectQuality;
+
 	public Prediction() {
-		
+
 	}
 
-	public Prediction(String best, String better, String ok, String bad) {
+	public Prediction(String behaviourWithColleagues, String levelOfCreativity, String attendance,
+			String projectPunctuality, String projectQuality) {
 		super();
-		this.best = best;
-		this.better = better;
-		this.ok = ok;
-		this.bad = bad;
+		this.behaviourWithColleagues = behaviourWithColleagues;
+		this.levelOfCreativity = levelOfCreativity;
+		this.attendance = attendance;
+		this.projectPunctuality = projectPunctuality;
+		this.projectQuality = projectQuality;
 	}
 
-	public String getBest() {
-		return best;
+	public String getBehaviourWithColleagues() {
+		return behaviourWithColleagues;
 	}
-	public void setBest(String best) {
-		this.best = best;
+
+	public void setBehaviourWithColleagues(String behaviourWithColleagues) {
+		this.behaviourWithColleagues = behaviourWithColleagues;
 	}
-	public String getBetter() {
-		return better;
+
+	public String getLevelOfCreativity() {
+		return levelOfCreativity;
 	}
-	public void setBetter(String better) {
-		this.better = better;
+
+	public void setLevelOfCreativity(String levelOfCreativity) {
+		this.levelOfCreativity = levelOfCreativity;
 	}
-	public String getOk() {
-		return ok;
+
+	public String getAttendance() {
+		return attendance;
 	}
-	public void setOk(String ok) {
-		this.ok = ok;
+
+	public void setAttendance(String attendance) {
+		this.attendance = attendance;
 	}
-	public String getBad() {
-		return bad;
+
+	public String getProjectPunctuality() {
+		return projectPunctuality;
 	}
-	public void setBad(String bad) {
-		this.bad = bad;
+
+	public void setProjectPunctuality(String projectPunctuality) {
+		this.projectPunctuality = projectPunctuality;
+	}
+
+	public String getProjectQuality() {
+		return projectQuality;
+	}
+
+	public void setProjectQuality(String projectQuality) {
+		this.projectQuality = projectQuality;
 	}
 	
 	

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.hrms.rest.application.exception.ResourceNotFoundException;
 import com.hrms.rest.application.models.Employees;
-import com.hrms.rest.application.models.Payroll;
 import com.hrms.rest.application.repositories.EmployeesRepository;
 
 @Service

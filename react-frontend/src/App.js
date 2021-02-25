@@ -22,6 +22,7 @@ import ListEmployeesComponent from "./components/ListEmployeesComponent.jsx";
 import UpdateEmployeeComponent from "./components/UpdateEmployeeComponent.jsx";
 import ListPayrollComponent from "./components/ListPayrollComponent";
 import PredictionComponent from "./components/prediction/PredictionComponent";
+import PredictionComponentPost from "./components/prediction/PredictionComponentPost.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -141,6 +142,11 @@ class App extends Component {
               component={CreateEmployeeComponent}
             />
             <Route exact path="/employees" component={ListEmployeesComponent} />
+            <Route
+              exact
+              path="/predictionpost"
+              component={PredictionComponentPost}
+            />
             <Route exact path="/prediction" component={PredictionComponent} />
             <Route exact path="/payrolls" component={ListPayrollComponent} />
             <Route
