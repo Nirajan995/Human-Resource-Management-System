@@ -57,3 +57,6 @@ label {
 .navbar{
   margin: 0px;
 }
+.container mt-3{
+  width: 100%;
+}

@@ -3,6 +3,8 @@ import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Admin from "./components/Admin.js";
+import Employee from "./components/Employee";
+import User from "./components/User";
 
 import AuthService from "./services/auth.service";
 import Header from "./header/HeaderLogo";
@@ -13,9 +15,14 @@ import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
-import BoardAdmin from "./components/board-admin.component";
 import FooterComp from "./Footer/FooterComp";
-import AddEmployee from "./components/AddEmployee"
+
+import CreateEmployeeComponent from "./components/CreateEmployeeComponent.jsx";
+import ListEmployeesComponent from "./components/ListEmployeesComponent.jsx";
+import UpdateEmployeeComponent from "./components/UpdateEmployeeComponent.jsx";
+import ListPayrollComponent from "./components/ListPayrollComponent";
+import PredictionComponent from "./components/prediction/PredictionComponent";
+import PredictionComponentPost from "./components/prediction/PredictionComponentPost.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +61,7 @@ class App extends Component {
           <Header></Header>
         </header>
         <nav className="navbar navbar-expand navbar-dark">
-        <Link to={"/"} className="navbar-brand">
+          <Link to={"/"} className="navbar-brand">
             KANN
           </Link>
           <div className="navbar-nav mr-auto">
@@ -66,8 +73,8 @@ class App extends Component {
 
             {showModeratorBoard && (
               <li className="nav-item">
-                <Link to={"/mod"} className="nav-link">
-                  Moderator Board
+                <Link to={"/employee"} className="nav-link">
+                  Employee Board
                 </Link>
               </li>
             )}
@@ -119,17 +126,35 @@ class App extends Component {
           )}
         </nav>
 
-        <div className="container mt-3">
+        <div>
           <Switch>
             <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
-            <Route path="/user" component={BoardUser} />
+            {/* <Route path="/user" component={BoardUser} /> */}
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={Admin} />
-            <Route exact path="/addemp" component={AddEmployee} />
-
+            <Route path="/employee" component={Employee} />
+            <Route
+              exact
+              path="/add-employees"
+              component={CreateEmployeeComponent}
+            />
+            <Route exact path="/employees" component={ListEmployeesComponent} />
+            <Route
+              exact
+              path="/predictionpost"
+              component={PredictionComponentPost}
+            />
+            <Route exact path="/prediction" component={PredictionComponent} />
+            <Route exact path="/payrolls" component={ListPayrollComponent} />
+            <Route
+              exact
+              path="/update-employees/:id"
+              component={UpdateEmployeeComponent}
+            />
+            <Route path="/user" component={User} />
           </Switch>
         </div>
         <FooterComp />

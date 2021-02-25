@@ -1,81 +1,113 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Switch, Route} from "react-router-dom";
-import "./Dashboardtoggler.css"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Dashboardtoggler.css";
+import * as BsIcons from "react-icons/bs";
+import * as FaIcons from "react-icons/fa";
+import * as RiIcons from "react-icons/ri";
+import * as BiIcons from "react-icons/bi";
+import * as MdIcons from "react-icons/md";
 
 export default function Dashboardtoggler() {
+  let time = new Date().toLocaleTimeString();
+  let date = new Date().toLocaleDateString();
+  const [ctime, setCtime] = useState(time);
+  const [tdate, setTdate] = useState(date);
+
+  const UpdateTime = () => {
+    time = new Date().toLocaleTimeString();
+    setCtime(time);
+    date = new Date().toLocaleDateString();
+    setTdate(date);
+  };
+  setInterval(UpdateTime, 1000);
   return (
-    
-    <div className="maindiv">
-      <div className="divcomp">
-        <h1 className="mgmtsystem">
-          EMPLOYEE MANAGEMENT TOOLS>>
-        </h1>
-        <div className="btnscomp">
-            
-            <Link to='addemp'>
-                  <button className='addbtn'>Add Employee</button>
-                </Link>
-                
-                
-            <Link to='edit'>
-                  <button className='editbtn'>Edit Employee</button>
-                </Link>
-               
-               
-            <Link to='view'>
-                  <button className='viewbtn'>View Employee</button>
-                </Link>
-               
-              
-            <Link to='terminate'>
-                  <button className='terminatebtn'>Terminate Employee</button>
-                </Link>
-               
+    <div className="maindiv1">
+      <div className="optionsdiv1">
+        <div className="welcomediv1">
+          <div className="welcomeicon1">
+            <BsIcons.BsPersonBoundingBox />
           </div>
-      </div>
-      <div className="payrolldivcomp"> 
-           <div className="payrollbtnscomp">
-              <Link to='viewsalaries'>
-                    <button className='viewpaybtn'>View Payroll</button>
-                  </Link>
-              <Link to='editsalaries'>
-                    <button className='editpaybtn'>Edit Payroll</button>
-                  </Link>
+          <div className="welcometext1">Welcome Admin</div>
+        </div>
+        <hr className="separator1" />
+        <div className="dashboarddiv1">
+          <div className="dashboardicon1">
+            <BsIcons.BsColumnsGap />
+          </div>
+          <div className="dashboardtext1">Dashboard</div>
+        </div>
+        <div className="list1">
+          <Link
+            to="/employees"
+            style={{ textDecoration: "none" }}
+            className="linkitem1"
+          >
+            <div>
+              <BsIcons.BsPeopleFill />
             </div>
-            <h1 className="payrollcomp">
-           PAYROLL MANAGEMENT TOOLS>>
-          </h1>
-      </div>
-      <div className="predictiondivcomp"> 
-           <div className="predictionbtnscomp">
-              <Link to='analyzeperformance'>
-                    <button className='analyzebtn'>Analyze Employee Performance</button>
-                  </Link>
-              <Link to='predictperformance'>
-                    <button className='predictbtn'>Predict Employee Performance</button>
-                  </Link>
+            <div>&emsp; Employee Management</div>
+          </Link>
+
+          <Link
+            to="/payrollmanagement"
+            style={{ textDecoration: "none" }}
+            className="linkitem1"
+          >
+            <div>
+              <RiIcons.RiMoneyDollarBoxLine />
             </div>
-            <h1 className="predictioncomp">
-           PERFORMANCE RELATED TOOLS>>
-          </h1>
-      </div>
-      <div className="projectdivcomp"> 
-           <div className="projectbtnscomp">
-              <Link to='addproject'>
-                    <button className='addprojectbtn'>Add Project</button>
-                  </Link>
-              {/* <Link to='editsalaries'>
-                    <button className='editpaybtn'>Edit Payroll</button>
-                  </Link> */}
+            <div>&emsp; Payroll Management</div>
+          </Link>
+
+          <Link
+            to="/predictionpost"
+            style={{ textDecoration: "none" }}
+            className="linkitem1"
+          >
+            <div>
+              <FaIcons.FaChartLine />
             </div>
-            <h1 className="projectcomp">
-           PROJECT MANAGEMENT TOOLS>>
-          </h1>
+            <div>&emsp; Performance Prediction</div>
+          </Link>
+
+          <Link
+            to="/projectmgmt"
+            style={{ textDecoration: "none" }}
+            className="linkitem1"
+          >
+            <div>
+              <BiIcons.BiTask />
+            </div>
+            <div>&emsp; Project Management</div>
+          </Link>
+
+          <Link
+            to="/support"
+            style={{ textDecoration: "none" }}
+            className="linkitem1"
+          >
+            <div>
+              <MdIcons.MdContactPhone />
+            </div>
+            <div>&emsp; Support</div>
+          </Link>
+
+          <Link
+            to="/about"
+            style={{ textDecoration: "none" }}
+            className="linkitem1"
+          >
+            <div>
+              <BsIcons.BsFillInfoSquareFill />
+            </div>
+            <div>&emsp; About</div>
+          </Link>
+        </div>
       </div>
-      
-    
+      <div className="bgdiv1">
+        <div className="clock1">{ctime}</div>
+        <div className="date1">{tdate}</div>
+      </div>
     </div>
-    
-  )
+  );
 }

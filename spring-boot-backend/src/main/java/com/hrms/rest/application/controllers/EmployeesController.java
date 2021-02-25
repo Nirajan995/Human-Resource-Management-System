@@ -19,7 +19,7 @@ import com.hrms.rest.application.models.Employees;
 import com.hrms.rest.application.services.EmployeeServices;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:8081")
 @RequestMapping("/api/v1")
 public class EmployeesController {
 	
