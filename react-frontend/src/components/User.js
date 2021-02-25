@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Userdashboard from "./Userdashboard";
 
 function User() {
-    return (
-        <div>
-            123
-        </div>
-    )
+  return (
+    <div>
+      <Userdashboard />
+    </div>
+  );
 }
 
-export default User
+export default User;

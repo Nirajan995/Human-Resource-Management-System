@@ -107,7 +107,7 @@ export default class PredictionComponentPost extends Component {
                 <option value="Below_Expectation">Below_Expectation</option>
               </select>
             </div>
-            <button class="btn btn-outline-success">Submit</button>
+            <button class="btn btn-outline-success">Predict</button>
           </form>
         </div>
       </div>

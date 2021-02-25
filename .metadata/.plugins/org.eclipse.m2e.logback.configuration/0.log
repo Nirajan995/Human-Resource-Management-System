@@ -5730,3 +5730,4 @@ java.io.FileNotFoundException: D:\HRMS Full Stack Project\.metadata\.plugins\org
 2021-02-25 17:20:44,473 [Worker-125: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-02-25 17:20:44,474 [Worker-125: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\HRMS Full Stack Project\spring-boot-backend\src\test\resources
 2021-02-25 17:40:54,660 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-02-25 19:38:02,717 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
