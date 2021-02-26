@@ -58,6 +58,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.antMatchers("/api/v2/**").permitAll()
 		.antMatchers("/api/test/**").permitAll()
 		.antMatchers("/prediction/employees").permitAll()
+		.antMatchers("/api/send/sms").permitAll()
 		.anyRequest().authenticated();
 
 	http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);

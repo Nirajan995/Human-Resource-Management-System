@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-02-24T03:50:00Z</updated>
+  <updated>2021-02-26T00:27:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Spring legend  Greg Turnquist  on Spring Data REST, HATEOAS, CI, and so much more.</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/02/25/a-bootiful-podcast-spring-legend-greg-turnquist-on-spring-data-rest-hateoas-ci-and-so-much-more" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-02-26:4375</id>
+    <updated>2021-02-26T00:27:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Spring legend &lt;a href="http://twitter.com/gregturn"&gt;Greg Turnquist (@gregturn)&lt;/a&gt; about Spring Data REST, HATEOAS, CI, and so much more. &lt;/p&gt;
+&lt;iframe title="Spring legend Greg Turnquist on Spring Data REST, HATEOAS, continuous integration and so much more" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/zamgb-fbea54?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Tips: Spring Cloud Gateway (Redux)</title>
     <link rel="alternate" href="https://spring.io/blog/2021/02/23/spring-tips-spring-cloud-gateway-redux" />
@@ -865,19 +878,6 @@ class AvailabilityController {&#xD;
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=bidnkrluql4&amp;feature=share"&gt;The Transparent Software Developer - some interesting insight in this video&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/VMware/status/1356739950620905472"&gt;We’re excited to announce dates for VMware conferences slated for this year &amp;ndash; VMworld, CloudLIVE, Connect, and SpringOne!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast:  RSocket legend and new Reactor team member Oleh Dokuka</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/04/a-bootiful-podcast-rsocket-legend-and-new-reactor-team-member-oleh-dokuka" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-02-05:4355</id>
-    <updated>2021-02-05T04:24:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;! In this episode, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to RSocket legend and new Reactor team member &lt;a href="https://twitter.com/OlehDokuka"&gt;Oleh Dokuka (@OlehDokuka)&lt;/a&gt; about RSocket routing, the RSocket broker, Netty, HTTP3 and Quick, the &lt;code&gt;RSocketClient&lt;/code&gt;, and so much more. &lt;/p&gt;
-&lt;iframe title="RSocket legend and new Reactor team member Oleh Dokuka " height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/m4ht5-f9c3eb?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
