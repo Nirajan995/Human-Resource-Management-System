@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+import SmsBoard from "./components/SmsBoard/SmsBoard.js";
 import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -23,6 +25,8 @@ import UpdateEmployeeComponent from "./components/UpdateEmployeeComponent.jsx";
 import ListPayrollComponent from "./components/ListPayrollComponent";
 import PredictionComponent from "./components/prediction/PredictionComponent";
 import PredictionComponentPost from "./components/prediction/PredictionComponentPost.jsx";
+import ListProjects from "./components/ListProjects.jsx";
+import Support from "./Support.js";
 
 class App extends Component {
   constructor(props) {
@@ -132,7 +136,8 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
-            {/* <Route path="/user" component={BoardUser} /> */}
+            <Route exact path="/sendsms" component={SmsBoard} />
+            <Route path="/user" component={User} />
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={Admin} />
             <Route path="/employee" component={Employee} />
@@ -149,6 +154,8 @@ class App extends Component {
             />
             <Route exact path="/prediction" component={PredictionComponent} />
             <Route exact path="/payrolls" component={ListPayrollComponent} />
+            <Route exact path="/projects" component={ListProjects} />
+            <Route exact path="/support" component={Support} />
             <Route
               exact
               path="/update-employees/:id"
