@@ -1,0 +1,116 @@
+.maindiv {
+  height: 1000px;
+  width: 100%;
+  background-color: rgb(73, 73, 73);
+  display: flex;
+}
+.optionsdiv {
+  width: 19%;
+  background-color: #797878;
+  height: 99%;
+  margin: auto auto;
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid #333333;
+}
+.bgdiv {
+  width: 80%;
+  height: 99%;
+  background-color: #818181;
+  margin: auto auto;
+  border-radius: 5px;
+  background-image: url("./ourbg.jpg");
+  background-size: cover;
+  border: 1px solid #333333;
+}
+.welcomediv {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.welcomeicon {
+  font-size: x-large;
+  color: #64c1e0;
+  padding: 5px;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.welcometext {
+  color: white;
+  font-style: italic;
+  font-size: xx-large;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-family: "Oswald", sans-serif;
+}
+.separator {
+  color: #333333;
+  background-color: #333333;
+}
+.dashboarddiv {
+  width: 96%;
+  height: 50px;
+  margin: 0px auto;
+  display: flex;
+  background-color: rgb(73, 73, 73);
+  border-radius: 3px;
+  border: 2px solid #333333;
+}
+.dashboardicon {
+  font-size: x-large;
+  color: #329cda;
+  padding: 5px;
+  padding-left: 77px;
+}
+.dashboardtext {
+  color: #ffffff;
+  font-size: x-large;
+  text-align: center;
+  padding-top: 7px;
+  padding-left: 5px;
+  font-family: "Oswald", sans-serif;
+}
+.list {
+  width: 97%;
+  margin: 0px auto;
+  list-style: none;
+  color: #333333;
+  padding: 20px 10px 20px 10px;
+}
+
+.linkitem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 7px;
+  padding-left: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.listicons {
+  color: #66baeb;
+}
+.linkitem:hover {
+  background-color: #474646;
+  border: 2px solid #333333;
+  font-weight: bolder;
+  color: aliceblue;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+.clock {
+  font-size: xxx-large;
+  font-weight: 650;
+  position: center;
+}
+.date {
+  font-size: x-large;
+  font-weight: 700;
+  position: center;
+}

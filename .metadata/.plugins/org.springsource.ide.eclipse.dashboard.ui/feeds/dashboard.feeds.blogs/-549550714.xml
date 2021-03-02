@@ -5,7 +5,62 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-02-24T03:50:00Z</updated>
+  <updated>2021-03-01T14:40:00Z</updated>
+  <entry>
+    <title>Spring Integration Zip 1.0.4 &amp; CVE-2021-22114</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/03/01/spring-integration-zip-1-0-4-cve-2021-22114" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2021-03-01:4376</id>
+    <updated>2021-03-01T14:40:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Dear Spring community,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the team and everyone who contributed, it is my pleasure to announce &lt;code&gt;1.0.4.RELEASE&lt;/code&gt; version for Spring Integration Zip extension.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="cve-2021-22114"&gt;&lt;a class="anchor" href="#cve-2021-22114"&gt;&lt;/a&gt;CVE-2021-22114&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;code&gt;UnZipTransformer&lt;/code&gt; doesn&amp;#8217;t cover all the cases for &lt;a href="https://snyk.io/research/zip-slip-vulnerability"&gt;Zip Slip Vulnerability&lt;/a&gt; and some particular zip entry names may still end up outside of working directory.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The updated fix has been released in the &lt;code&gt;spring-integration-zip-1.0.4.RELEASE&lt;/code&gt; version together with some other bug fixes and improvements.
+We also have published a new advisory for &lt;a href="https://tanzu.vmware.com/security/cve-2021-22114"&gt;CVE-2021-22114&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Credit: Trung Pham, Viettel Cyber Security.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Everybody who&amp;#8217;s using unzip feature from Spring Integration Zip is encouraged to upgrade respectively.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Cheers,&amp;#160;&lt;br&gt;
+Artem&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-extensions"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-extensions/issues"&gt;GitHub Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>A Bootiful Podcast: Spring legend  Greg Turnquist  on Spring Data REST, HATEOAS, CI, and so much more.</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/02/25/a-bootiful-podcast-spring-legend-greg-turnquist-on-spring-data-rest-hateoas-ci-and-so-much-more" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-02-26:4375</id>
+    <updated>2021-02-26T00:27:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Spring legend &lt;a href="http://twitter.com/gregturn"&gt;Greg Turnquist (@gregturn)&lt;/a&gt; about Spring Data REST, HATEOAS, CI, and so much more. &lt;/p&gt;
+&lt;iframe title="Spring legend Greg Turnquist on Spring Data REST, HATEOAS, continuous integration and so much more" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/zamgb-fbea54?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Tips: Spring Cloud Gateway (Redux)</title>
     <link rel="alternate" href="https://spring.io/blog/2021/02/23/spring-tips-spring-cloud-gateway-redux" />
@@ -831,53 +886,6 @@ class AvailabilityController {&#xD;
 &lt;p&gt;Metrics can be used beyond the scope of requests for monitoring memory, CPU usage, garbage collection, and caches, to name a few. You will want to use metrics for your alerting, SLOs (service-level objectives), and dashboards. In the &lt;code&gt;console-availability&lt;/code&gt; example, it would be an alert about an SLO violation that notifies us about a high error rate for our service. (You don&amp;rsquo;t want to stare at dashboards 24/7 to detect issues, do you?)&lt;/p&gt;
 &lt;p&gt;Then, with both metrics and traces, we can jump from one to the other using common metadata available in each. Both metrics and trace information support capturing arbitrary key-value pairs with the data called tags. For example, given an alert notification about high latency on an HTTP-based service (based on metrics), you could link to a search of spans (trace data) that match the alert. You would search for spans with the same service, HTTP method, HTTP URI, and that are above a duration threshold to quickly get a sampling of traces matching the alert.&lt;/p&gt;
 &lt;p&gt;In conclusion, data is better than no data, and integrated data is better than non-integrated data. Micrometer and Spring Cloud Sleuth provides a solid observability posture, out of the box, but can be configured and adapted to your business/domain&amp;rsquo;s context. And, finally, while you &lt;em&gt;could&lt;/em&gt; use Micrometer or Spring Cloud Sleuth with any number of other backends, we find Wavefront a convenient and powerful option. The code shown in the example is available from &lt;a href="https://github.com/shakuzen/console-availability"&gt;this GitHub repository&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - February 9th, 2020</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/09/this-week-in-spring-february-9th-2020" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-02-09:4356</id>
-    <updated>2021-02-09T17:42:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! &lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m &lt;em&gt;just&lt;/em&gt; about to give a 2h presentation &lt;a href="https://twitter.com/VMwareTanzuNL/status/1358876516256514055"&gt;for the OOP conference&lt;/a&gt;. It&amp;rsquo;s live. It&amp;rsquo;ll be fun. Join us? &lt;/p&gt;
-&lt;p&gt;How&amp;rsquo;ve you been? You realize it&amp;rsquo;s already the second week of February? Chinese New Year, a holiday celebrated by more than two billion people, begins on the 12th of February. So, seeing as how we won&amp;rsquo;t get to talk again until after, let me wish everyone who celebrates: ????! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/04/a-bootiful-podcast-rsocket-legend-and-new-reactor-team-member-oleh-dokuka"&gt;A Bootiful Podcast: RSocket legend and new Reactor team member Oleh Dokuka&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/linux-china/rsocket-load-balancing"&gt;Alibaba&amp;rsquo;s Jacky Chan has put together an awesome project that does client-side load balancing with Spring Cloud, but based on RSocket - very convenient!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/03/demystifying-spring-cloud-stream-producers-with-apache-kafka-partitions"&gt;Demystifying Spring Cloud Stream producers with Apache Kafka partitions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2021/02/02/2021-a-look-ahead-for-open-source-at-vmware/"&gt;2021: A Look Ahead for Open Source at VMware&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/sivalabs/status/1357497634320117760?s=12"&gt;A New Yeoman code generator for Spring Boot (that &lt;em&gt;isn&amp;rsquo;t&lt;/em&gt; the amazing JHipster?). Looks interesting&amp;hellip;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=vruk51nnr9s&amp;feature=share"&gt;A Spring Boot REST API powered by Redis, part 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/domaframework/doma-spring-boot"&gt;A Spring Boot starter for the Doma mapping framework&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/sipios/handle-r2dbc-in-spring-projects-fa96e65ca24d"&gt;A great blog, &lt;em&gt;Handle R2DBC in Spring Projects&lt;/em&gt;, by Thibault MONEGIER du SORBIER&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/developer/guides/kubernetes/velero-gs/"&gt;A very useful guide to backups in Kubernetes, &lt;em&gt;Getting Started with Velero&lt;/em&gt;, by teammate and legend &lt;a href="https://twitter.com/tiffanyfayj"&gt;Tiffany Jernigan&lt;/a&gt;, is now available on the VMware Tanzu Developer Center&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/TheApacheTomcat/status/1356952799360282624?s=20"&gt;Apache Tomcat 10.0.2 has been released This is the first stable release of the 10.0.x series. Apache Tomcat 10.0.x targets Jakarta EE 9 (Servlet, WebSocket, EL, Pages, Authentication &amp;amp; Annotations)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?app=desktop&amp;v=1i96a_0wCFM&amp;feature=youtu.be"&gt;Build a Secure Spring Data JPA Resource Server&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=XJoJCMfCSTk&amp;feature=emb_title"&gt;Building a Spring Boot REST API powered by Redis, with a React front end (part 1)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/graalvm/graalvm-native-image-quick-reference-4ceb84560fd8"&gt;GraalVM Native Image Quick Reference&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://open.spotify.com/episode/3a6zZKPhiHnDIQdLAWyUOs?si=obyIclVKTOyeL8yG0hnv1Q&amp;nd=1"&gt;I was honored to have been a guest on the Devpod podcast. It was a fun interview and I hope you&amp;rsquo;ll enjoy it, too.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.meetup.com/seajug/events/276135388/"&gt;I&amp;rsquo;ll be speaking at the Seattle JUG Meetup on February 16th, 2021. Mark your calendars now and join us then!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1357078493746528259"&gt;Learn more about what Microsoft Azure has to offer Java developers? Attend this fast-paced, virtual intro session at the Microsoft Reactor led by Rory Preddy on Feb-10&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=bidnkrluql4&amp;feature=share"&gt;The Transparent Software Developer - some interesting insight in this video&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/VMware/status/1356739950620905472"&gt;We’re excited to announce dates for VMware conferences slated for this year &amp;ndash; VMworld, CloudLIVE, Connect, and SpringOne!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast:  RSocket legend and new Reactor team member Oleh Dokuka</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/04/a-bootiful-podcast-rsocket-legend-and-new-reactor-team-member-oleh-dokuka" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-02-05:4355</id>
-    <updated>2021-02-05T04:24:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;! In this episode, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to RSocket legend and new Reactor team member &lt;a href="https://twitter.com/OlehDokuka"&gt;Oleh Dokuka (@OlehDokuka)&lt;/a&gt; about RSocket routing, the RSocket broker, Netty, HTTP3 and Quick, the &lt;code&gt;RSocketClient&lt;/code&gt;, and so much more. &lt;/p&gt;
-&lt;iframe title="RSocket legend and new Reactor team member Oleh Dokuka " height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/m4ht5-f9c3eb?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.hrms.rest.application.models.Projects;
 
 @Repository
-public interface ProjectRepository {
-
+public interface ProjectRepository extends CrudRepository<Projects, Integer>{
+	
 }

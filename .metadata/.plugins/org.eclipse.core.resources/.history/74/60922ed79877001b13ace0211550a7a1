@@ -1,0 +1,5 @@
+package com.hrms.rest.application.sms.configuration;
+
+public class TwilioConfiguration {
+
+}

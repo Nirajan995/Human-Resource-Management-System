@@ -1,0 +1,31 @@
+package com.hrms.rest.application.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hrms.rest.application.sms.request.SmsRequest;
+import com.hrms.rest.application.sms.service.SmsService;
+
+import javax.validation.Valid;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:8081")
+@RequestMapping("/api/send")
+public class SMSController{
+    private final SmsService service;
+
+    @Autowired
+    public SMSController(SmsService service) {
+        this.service = service;
+    }
+
+    @PostMapping("/sms")
+    public void sendSms(@Valid @RequestBody SmsRequest smsRequest) {
+    	System.out.println(smsRequest.toString());
+        service.sendSms(smsRequest);
+    }
+}

@@ -69,7 +69,7 @@
 	</section>
 	<section name="AddGetterSetterDialog">
 		<item key="SortOrdering" value="false"/>
-		<item key="RemoveFinal" value="false"/>
+		<item key="RemoveFinal" value="true"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item key="DIALOG_X_ORIGIN" value="631"/>

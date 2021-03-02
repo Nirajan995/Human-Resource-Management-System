@@ -49,7 +49,7 @@ export default function Dashboardtoggler() {
           </Link>
 
           <Link
-            to="/payrollmanagement"
+            to="/payrolls"
             style={{ textDecoration: "none" }}
             className="linkitem1"
           >
@@ -71,7 +71,7 @@ export default function Dashboardtoggler() {
           </Link>
 
           <Link
-            to="/projectmgmt"
+            to="/projects"
             style={{ textDecoration: "none" }}
             className="linkitem1"
           >
