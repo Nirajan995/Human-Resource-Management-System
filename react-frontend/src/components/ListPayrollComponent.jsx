@@ -17,7 +17,7 @@ export default class ListPayrollComponent extends Component {
         <table className="table table-striped table-bordered">
           <thead>
             <tr>
-              <th>Id</th>
+              <th>Employee Id</th>
               <th>Salary</th>
             </tr>
           </thead>

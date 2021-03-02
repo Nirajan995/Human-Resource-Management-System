@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SmsRequest {
 
     @NotBlank
-    private final String phoneNumber; // destination
+    private String phoneNumber; // destination
 
     @NotBlank
-    private final String message;
+    private String message;
 
     public SmsRequest(@JsonProperty("phoneNumber") String phoneNumber,
                       @JsonProperty("message") String message) {
@@ -25,8 +25,18 @@ public class SmsRequest {
     public String getMessage() {
         return message;
     }
+    
+    
 
-    @Override
+    public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	@Override
     public String toString() {
         return "SmsRequest{" +
                 "phoneNumber= ..." + '\'' +

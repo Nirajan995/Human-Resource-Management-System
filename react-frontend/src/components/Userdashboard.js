@@ -38,7 +38,7 @@ function Userdashboard() {
         </div>
         <div className="list">
           <Link
-            to="/projectmgmt"
+            to="/projects"
             style={{ textDecoration: "none" }}
             className="linkitem"
           >

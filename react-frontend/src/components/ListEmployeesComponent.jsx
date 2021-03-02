@@ -20,10 +20,16 @@ export default class ListEmployeesComponent extends Component {
     this.props.history.push(`/update-employees/${id}`);
   };
 
+  sendSMS = (id) => {
+    this.props.history.push(`/sendSms`);
+  };
+
   deleteEmployee = (id) => {
     EmployeeService.deleteEmployee(id).then((resp) => {
       this.setState({
-        employees: this.state.employees.filter((employee) => employee.id !== id),
+        employees: this.state.employees.filter(
+          (employee) => employee.id !== id
+        ),
       });
     });
   };
@@ -48,6 +54,7 @@ export default class ListEmployeesComponent extends Component {
           >
             <thead>
               <tr>
+                <th>Employee Id</th>
                 <th>Employee First Name</th>
                 <th>Employee last Name</th>
                 <th>Employee Age</th>
@@ -61,6 +68,7 @@ export default class ListEmployeesComponent extends Component {
             <tbody>
               {this.state.employees.map((employee) => (
                 <tr key={employee.id}>
+                  <td>{employee.id}</td>
                   <td>{employee.firstName}</td>
                   <td>{employee.lastName}</td>
                   <td>{employee.age}</td>
@@ -75,6 +83,14 @@ export default class ListEmployeesComponent extends Component {
                       className="btn btn-outline-info "
                     >
                       Update
+                    </button>
+                    <button
+                      style={{ marginLeft: "5px" }}
+                      type="button"
+                      onClick={() => this.sendSMS(employee.id)}
+                      className="btn btn-outline-primary "
+                    >
+                      Send SMS
                     </button>
                     <button
                       style={{ marginLeft: "5px" }}
