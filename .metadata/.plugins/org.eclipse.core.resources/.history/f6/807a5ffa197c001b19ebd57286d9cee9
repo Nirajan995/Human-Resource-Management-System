@@ -11,6 +11,7 @@ import javax.script.ScriptEngineManager;
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Service;
 
+import com.hrms.rest.application.models.Prediction;
 import com.namsor.oss.classify.bayes.ClassifyException;
 import com.namsor.oss.classify.bayes.IClassification;
 import com.namsor.oss.classify.bayes.IClassificationExplained;
@@ -20,6 +21,7 @@ import com.namsor.oss.classify.bayes.PersistentClassifierException;
 
 @Service
 public class PredictionService {
+	private Prediction prediction;
 	public static final String BEST = "Best";
 	public static final String BETTER = "Better";
 	public static final String OK = "Ok";
@@ -137,39 +139,183 @@ public class PredictionService {
 
 			{ "Unable_to_communicate", "Highly_Creative", "Sometimes_Absent", "Occasionally_Late", "As_Expected",
 					"Ok" },
-			{ "Unable_to_communicate", "Not_Creative", "Rarely_Absent", "OnTime", "As_Beyond_Expectation", "Ok" },
-			{ "Less_Cooperative", "Less_Creative", "Rarely_Absent", "OnTime", "As_Beyond_Expectation", "Better" },
-			{ "Highly_Cooperative", "Creative", "Rarely_Absent", "OnTime", "As_Beyond_Expectation", "Best" },
-			{ "Highly_Cooperative", "Less_Creative", "Rarely_Absent", "OnTime", "As_Beyond_Expectation", "Best" },
+			{ "Unable_to_communicate", "Not_Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Ok" },
+			{ "Less_Cooperative", "Less_Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Better" },
+			{ "Highly_Cooperative", "Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Best" },
+			{ "Highly_Cooperative", "Less_Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Best" },
 
 			{ "Less_Cooperative", "Less_Creative", "Rarely_Absent", "Rarely_Late", "As_Expected", "Ok" },
 			{ "Highly_Cooperative", "Creative", "Sometimes_Absent", "OnTime", "Below_Expected", "Ok" },
 			{ "Cooperative", "Highly_Creative", "Mostly_Present", "Occasionally_Late", "Little_Below_Expectation",
 					"Ok" },
-			{ "Unable_To_Communicate", "Highly_Creative", "Rarely_Absent", "Ontime", "As_Beyond_Expectaion", "Best" },
-			{ "Highly_Cooperative", "Highly_Creative", "Frequent_Absent", "On_Time", "As_Beyond_Ecpectation", "Best" },
+			{ "Not_Cooperative", "Highly_Creative", "Rarely_Absent", "Ontime", "Beyond_Expectaion", "Best" },
+			{ "Highly_Cooperative", "Highly_Creative", "Frequent_Absent", "On_Time", "Beyond_Expectation", "Best" },
 
 			{ "Less_Cooperative", "Less_Creative", "Frequently_Absent", "Mostly_Late", "Beyond_Expectation", "Bad" },
 			{ "Less_Cooperative", "Less_Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
 			{ "Cooperative", "Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
-			{ "Highly_Cooperative", "Creative", "Sometimes_Absent", "Occasionally_Late", "As_Beyond_Expectation",
+			{ "Highly_Cooperative", "Creative", "Sometimes_Absent", "Occasionally_Late", "Beyond_Expectation",
 					"Better" },
 			{ "Cooperative", "Less_Creative", "Rarely_Absent", "Rarely_Late", "As_Expectation", "Better" },
 
 			{ "Highly_Cooperative", "Creative", "Mostly_Present", "Rarely_Late", "Below_Expectation", "Ok" },
 			{ "Higlhy_Cooperative", "Not_Creative", "Rarely_Absent", "OnTime", "Below_Expectation", "Ok" },
-			{ "Less_Cooperative", "Creative", "Sometimes_Absent", "OnTime", "As_Beyond_Expectation", "Better" },
-			{ "Unable_To_Communicate", "Highly_Creative", "Frequently_Absent", "Occasionally_Late",
+			{ "Less_Cooperative", "Creative", "Sometimes_Absent", "OnTime", "Beyond_Expectation", "Better" },
+			{ "Not_Cooperative", "Highly_Creative", "Frequently_Absent", "Occasionally_Late",
 					"Little_Beyond_Expectation", "Ok" },
 			{ "Highly_Cooperative", "Highly_Creative", "Sometimes_Absent", "OnTime", "As_Beyond_Expectation", "Best" },
 
 			{ "Highly_Cooperative", "Highly_Creative", "Rarely_Absent", "OnTime", "As_Beyond_Expectation", "Best" },
 			{ "Highly_Cooperative", "Less_Creative", "Sometimes_Absent", "Mostly_Late", "Below_Expectation", "Ok" },
 			{ "Less_Cooperative", "Highly_Creative", "Rarely_Absent", "Occasionally_Late", "As_Expected", "Better" },
-			{ "Unable_To_Communicate", "Not_Creative", "Frequently_Absent", "OnTime", "Little_Beyond_Expectation",
+			{ "Less_Cooperative", "Not_Creative", "Frequently_Absent", "OnTime", "Little_Beyond_Expectation",
 					"Bad" },
-			{ "Cooperative", "Creative", "Sometimes_Absent", "Mostly_Late", "As_Beyond_Expectation", "Ok" }, };
+			{ "Cooperative", "Creative", "Sometimes_Absent", "Mostly_Late", "As_Beyond_Expectation", "Ok" },
+			{ "Less_Cooperative", "Highly_Creative", "Mostly_Present", "Occasionally_Late", "Beyond_Expectation",
+					"Best" },
+			{ "Cooperative", "Less_Creative", "Rarely_Absent", "OnTime", "Little_Below_Expectation", "Best" },
+			{ "Less_Cooperative", "Creative", "Mostly_Present", "Occasionally_Late", "Below Expectation", "Ok" },
+			{ "Cooperative", "Less_Creative", "Sometimes_Absent", "Rarely_Late", "Little_Below_Expectation", "Better" },
+			{ "Highly_Cooperative", "Creative", "Mostly_Present", "OnTime", "Beyond_Expectation", "Best" },
+			{ "Highly_Cooperative", "Not_Creative", "Frequently_Absent", "Occasionally_Late",
+					"Little_Below_Expectation", "Ok" },
+			{ "Less_Cooperative", "Less_Creative", "Rarely_Absent", "Rarely_Late", "Beyond_Expectation", "Better" },
+			{ "Cooperative", "Creative", "Sometimes_Absent", "Mostly_Late", "As_Expected", "Ok" },
+			{ "Less_Cooperative", "Less_Creative", "Rarely_Absent", "Mostly_Late", "Little_Below_Expectation", "Bad" },
+			{ "Not_Cooperative", "Creative", "Mostly_Present", "OnTime", "Little_Below_Expectation", "Better" },
+			{ "Less_Cooperative", "Less_Creative", "Mostly_Present", "Occasionally_Late", "Below_Expectation", "Bad" },
+			{ "Less_Cooperative", "Highly_Creative", "Frequently_Absent", "Occasionally_Late", "As_Expected", "Ok" },
+			{ "Less_Cooperative", "Creative", "Sometimes_Absent", "Occasionally_Late", "Beyond_Expectation", "Better" },
+			{ "Highly_Cooperative", "Creative", "Sometimes_Absent", "Rarely_Late", "Beyond_Expectation", "Best" },
+			{ "Cooperative", "Less_Creative", "Mostly_Present", "OnTime", "Little_Below_Expectation", "Better" },
+			{ "Highly_Cooperative", "Highly_Creative", "Sometimes_Absent", "Mostly_Late", "As_Expected", "Better" },
+			{ "Less_Cooperative", "Creative", "Sometimes_Absent", "Occasionally_Late", "Little_Below_Expectation",
+					"Ok" },
+			{ "Not_Cooperative", "Less_Creative", "Rarely_Absent", "Rarely_Late", "As_Expected", "Ok" },
+			{ "Less_Cooperative", "Not_Creative", "Sometimes_Absent", "Rarely_Late", "As_Expected", "Ok" },
+			{ "Not_Cooperative", "Less_Creative", "Frequently_Absent", "Occasionally_Late", "Little_Below_Expectation",
+					"Bad" },
+			{ "Highly_Cooperative", "Creative", "Mostly_Present", "Ontime", "Beyond_Expectation", "Better" },
+			{ "Cooperative", "Not_Creative", "Rarely_Absent", "Mostly_Late", "Below_Expectation", "Ok" },
+			{ "Less_Cooperative", "Highly_Creative", "Sometimes_Absent", "Occasionally_Late", "Beyond_Expectation",
+					"Best" },
+			{ "Not_Cooperative", "Less_Creative", "Mostly_Present", "Rarely_Late", "Beyond_Expectation", "Bad" },
 
+			{ "Highly_Cooperative", "Highly_Creative", "Rarely_Absent", "Ontime", "Little_Below_Expectation", "Best" },
+			{ "Cooperative", "Creative", "Mostly_Present", "Rarely_Late", "As_Expected", "Bad" },
+			{ "Less_Cooperative", "Less_Creative", "Sometimes_Absent", "Ontime", "Below_Expectation", "Ok" },
+			{ "Not_Cooperative", "Not_Creative", "Mostly_Present", "Ontime", "Beyond_Expectation", "Better" },
+
+			{ "Less_Cooperative", "Highly_Creative", "Mostly_Present", "Mostly_Late", "Beyond_Expectation", "Better" },
+			{ "Cooperative", "Less_Creative", "Rarely_Absent", "Ontime", "Beyond_Expectation", "Bad" },
+			{ "Not_Cooperative", "Not_Creative", "Sometimes_Absent", "Occasionally_Late", "Beyond_Expectation", "Ok" },
+			{ "Highly_Cooperative", "Creative", "Frequently_Absent", "Ontime", "Beyond_Expectation", "Best" },
+
+			{ "Cooperative", "Highly_Creative", "Frequently_Absent", "Ontime", "Beyond_Expectation", "Bad" },
+			{ "Less_Cooperative", "Not_Creative", "Sometimes_Absent", "Occasionally_Late", "As_Expected", "Ok" },
+			{ "Highly_Cooperative", "Less_Creative", "Mostly_Present", "Rarely_Late", "Little_Below_Expectation",
+					"Better" },
+			{ "Not_Cooperative", "Creative", "Mostly_Present", "Mostly_Late", "Below_Expectation", "Best" },
+
+			{ "Highly_Cooperative", "Not_Creative", "Frequently_Absent", "Ontime", "Beyond_Expectation", "Best" },
+			{ "Less_Cooperative", "Less_Creative", "Mostly_Present", "Ontime", "Little_Below_Expectation", "Bad" },
+			{ "Cooperative", "Highly_Creative", "Rarely_Absent", "Occasionally_Late", "As_Expected", "Better" },
+			{ "Not_Cooperative", "Creative", "Mostly_Present", "Ontime", "Below_Expectation", "Ok" },
+
+			{ "Cooperative", "Creative", "Sometimes_Absent", "Mostly_Late", "Beyond_Expectation", "Best" },
+			{ "Cooperative", "Highly_Creative", "Frequently_Absent", "Ontime", "Little_Below_Expectation", "Better" },
+			{ "Not_Cooperative", "Less_Creative", "Mostly_Present", "Occasionally_Late", "Beyond_Expectation", "Ok" },
+			{ "Less_Cooperative", "Creative", "Rarely_Absent", "Rarely_Late", "Below_Expectation", "Bad" },
+
+			{ "Not_Cooperative", "Not_Creative", "Frequently_Absent", "Rarely_Late", "As_Expected", "Bad" },
+			{ "Less_Cooperative", "Creative", "Frequently_Absent", "Mostly_Late", "Little_Below_Expectation", "Ok" },
+			{ "Cooperative", "Less_Creative", "Rarely_Absent", "Occasionally_Late", "As_Expected", "Ok" },
+			{ "Highly_Cooperative", "Highly_Creative", "Sometimes_Absent", "Occasionally_Late", "As_Expected", "Best" },
+
+			{ "Not_Cooperative", "Not_Creative", "Sometimes_Absent", "Mostly_Late", "As_Expected", "Bad" },
+			{ "Cooperative", "Creative", "Mostly_Present", "Ontime", "Below_Expectation", "Better" },
+			{ "Highly_Cooperative", "Creative", "Frequently_Absent", "Mostly_Late", "Little_Below_Expectation", "Ok" },
+			{ "Not_Cooperative", "Creative", "Frequently_Absent", "Rarely_Late", "Below_Expectation", "Bad" },
+
+			{ "Not_Cooperative", "Creative", "Frequently_Absent", "Ontime", "Little_Below_Expectation", "Bad" },
+			{ "Cooperative", "Not_Creative", "Sometimes_Absent", "Mostly_Late", "Below_Expectation", "Ok" },
+			{ "Not_Cooperative", "Less_Creative", "Rarely_Absent", "Mostly_Late", "As_Expected", "Ok" },
+			{ "Less_Cooperative", "Highly_Creative", "Mostly_Present", "Ontime", "Below_Expectation", "Better" },
+
+			{ "Cooperative", "Highly_Creative", "Mostly_Present", "Mostly_Late", "As_Expected", "Better" },
+			{ "Highly_Cooperative", "Not_Creative", "Frequently_Absent", "Occasionally_Late",
+					"Little_Below_Expectation", "Better" },
+			{ "Less_Cooperative", "Creative", "Frequently_Absent", "Rarely_Late", "Below_Expectation", "Ok" },
+			{ "Not_Cooperative", "Not_Creative", "Frequently_Absent", "Occasionally_Late", "As_Expected", "Bad" },
+
+			{ "Cooperative", "Not_Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
+			{ "Less_Cooperative", "Less_Creative", "Sometimes_Absent", "Rarely_Late", "As_Expected", "Ok" },
+			{ "Not_Cooperative", "Highly_Creative", "Rarely_Absent", "Ontime", "Little_Below_Expectation", "Best" },
+			{ "Cooperative", "Creative", "Frequently_Absent", "Mostly_Late", "Beyond_Expectation", "Ok" },
+
+			{ "Cooperative", "Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
+			{ "Less_Cooperative", "Not_Creative", "Sometimes_Absent", "Ontime", "Beyond_Expectation", "Ok" },
+			{ "Cooperative", "Creative", "Frequently_Absent", "Rarely_Late", "Little_Below_Expectation", "Better" },
+			{ "Not_Cooperative", "Less_Creative", "Rarely_Absent", "Mostly_Late", "As_Expected", "Ok" },
+			{ "Highly_Cooperative", "Creative", "Rarely_Absent", "OnTime", "As_Beyond_Expected", "Best" },
+			{ "Cooperative", "Highly_Creative", "Mostly_Present", "OnTime", "As_Epected", "Better" },
+			{ "Less_Cooperative", "Less_Creative", "Mostly_Present", "Occasionally_Late", "Little_Below_Expectation",
+					"Ok" },
+			{ "Less_Cooperative", "Not_Creative", "Rarely_Absent", "Mostly_Late", "Little_Below_Expectation",
+					"Bad" },
+			{ "Highly_Cooperative", "Less_Creative", "Sometimes_Absent", "Rarely_Late", "As_Expected", "Better" },
+
+			{ "Highly_Cooperative", "Highly_Creative", "Mostly_Present", "OnTime", "Beyond_Expectation", "Best" },
+			{ "Highly_Cooperative", "Creative", "Someties_Absent", "Ontime", "Little_Below_Expectation", "Better" },
+			{ "Less_Cooperative", "Less_Creative", "Mostly_Present", "Rarely_Late", "Beyond_Expectation", "Better" },
+			{ "Highly_Cooperative", "Creative", "Mostly_Present", "Mostly_time", "Below_Expectation", "Ok" },
+			{ "Cooperative", "Creative", "Mostly_Present", "Rarely_Late", "As_Expected", "Better" },
+
+			{ "Cooperative", "Less_Creative", "Rarely_Absent", "Rarely_Late", "As_Beyond_Expected", "Better" },
+			{ "Cooperative", "Not_Creative", "Sometimes_Absent", "OnTime", "As_Expected", "Ok" },
+			{ "Unable_to_communicate", "Highly_Creative", "Mostly_Present", "Rarely_Late", "Below_Expectation", "Ok" },
+			{ "Highly_Cooperative", "Not_Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
+			{ "Highly_Cooperative", "Less_Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
+
+			{ "Not_Cooperative", "Highly_Creative", "Sometimes_Absent", "Occasionally_Late", "As_Expected",
+					"Ok" },
+			{ "Not_Cooperative", "Not_Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Ok" },
+			{ "Less_Cooperative", "Less_Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Better" },
+			{ "Highly_Cooperative", "Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Best" },
+			{ "Highly_Cooperative", "Less_Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Best" },
+
+			{ "Less_Cooperative", "Less_Creative", "Rarely_Absent", "Rarely_Late", "As_Expected", "Ok" },
+			{ "Highly_Cooperative", "Creative", "Sometimes_Absent", "OnTime", "Below_Expected", "Ok" },
+			{ "Cooperative", "Highly_Creative", "Mostly_Present", "Occasionally_Late", "Little_Below_Expectation",
+					"Ok" },
+			{ "Unable_To_Communicate", "Highly_Creative", "Rarely_Absent", "Ontime", "Beyond_Expectaion", "Best" },
+			{ "Highly_Cooperative", "Highly_Creative", "Frequent_Absent", "On_Time", "Beyond_Ecpectation", "Best" },
+
+			{ "Less_Cooperative", "Less_Creative", "Frequently_Absent", "Mostly_Late", "Beyond_Expectation", "Bad" },
+			{ "Less_Cooperative", "Less_Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
+			{ "Cooperative", "Creative", "Frequently_Absent", "Mostly_Late", "Below_Expectation", "Bad" },
+			{ "Highly_Cooperative", "Creative", "Sometimes_Absent", "Occasionally_Late", "Beyond_Expectation",
+					"Better" },
+			{ "Cooperative", "Less_Creative", "Rarely_Absent", "Rarely_Late", "As_Expectation", "Better" },
+
+			{ "Highly_Cooperative", "Creative", "Mostly_Present", "Rarely_Late", "Below_Expectation", "Ok" },
+			{ "Highly_Cooperative", "Not_Creative", "Rarely_Absent", "OnTime", "Below_Expectation", "Ok" },
+			{ "Less_Cooperative", "Creative", "Sometimes_Absent", "OnTime", "As_Beyond_Expectation", "Better" },
+			{ "Unable_To_Communicate", "Highly_Creative", "Frequently_Absent", "Occasionally_Late",
+					"Little_Beyond_Expectation", "Ok" },
+			{ "Highly_Cooperative", "Highly_Creative", "Sometimes_Absent", "OnTime", "Beyond_Expectation", "Best" },
+
+			{ "Highly_Cooperative", "Highly_Creative", "Rarely_Absent", "OnTime", "Beyond_Expectation", "Best" },
+			{ "Highly_Cooperative", "Less_Creative", "Sometimes_Absent", "Mostly_Late", "Below_Expectation", "Ok" },
+			{ "Less_Cooperative", "Highly_Creative", "Rarely_Absent", "Occasionally_Late", "As_Expected", "Better" },
+			{ "Not_Cooperative", "Not_Creative", "Frequently_Absent", "OnTime", "Little_Beyond_Expectation",
+					"Bad" },
+			{ "Cooperative", "Creative", "Sometimes_Absent", "Mostly_Late", "Beyond_Expectation", "Ok" }, };
+	
+	public void updatePrediction(Prediction prediction) {
+		this.prediction=prediction;
+	}
+	
 	@SuppressWarnings("unchecked")
 	public JSONObject predict() {
 
@@ -189,11 +335,11 @@ public class PredictionService {
 			}
 
 			Map<String, String> features = new HashMap<>();
-			features.put("Behaviour_with_Colleagues", "Cooperative");
-			features.put("Level_of_Creativity", "Less_Creative");
-			features.put("Attendance", "Sometimes_Absent");
-			features.put("Project_Punctuality", "Rarely_Late");
-			features.put("Project_Quality", "Little_Below_Expectation");
+			features.put("Behaviour_with_Colleagues", prediction.getBehaviourWithColleagues());
+			features.put("Level_of_Creativity", prediction.getLevelOfCreativity());
+			features.put("Attendance", prediction.getAttendance());
+			features.put("Project_Punctuality", prediction.getProjectPunctuality());
+			features.put("Project_Quality", prediction.getProjectQuality());
 
 			IClassification predict = bayes.classify(features, true);
 			for (int i = 0; i < predict.getClassProbabilities().length; i++) {
@@ -212,7 +358,8 @@ public class PredictionService {
 				ScriptEngine scriptEngine = scriptEngineManager.getEngineByName("JavaScript");
 				// JavaScript code from String
 				Double proba = (Double) scriptEngine.eval(explained.toString());
-//				System.out.println("Result of calculating in Percentage = " + Math.round(proba * 100) + "%");
+				
+				System.out.println("Result of calculating in Percentage = " + Math.round(proba * 100) + "%");
 			}
 
 		} catch (PersistentClassifierException ex) {

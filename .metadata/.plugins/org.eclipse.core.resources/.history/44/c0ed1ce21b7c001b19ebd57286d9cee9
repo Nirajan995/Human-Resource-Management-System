@@ -35,18 +35,18 @@ public class Employees {
 //	@OneToOne(cascade = CascadeType.ALL)
 //	@JoinColumn(name = "payroll_id", referencedColumnName = "payroll_id")
 //	private Payroll payroll;
-
-	public Employees() {
-
-	}
-
+//
+//	public Employees() {
+//
+//	}
+//
 //	public Payroll getPayroll() {
 //		return payroll;
 //	}
-//
-//	public void setPayroll(Payroll payroll) {
-//		this.payroll = payroll;
-//	}
+
+	public void setPayroll(Payroll payroll) {
+		this.payroll = payroll;
+	}
 
 	public Employees(String firstName, String lastName, int age, String email, String address, String phone_no,
 			Date hireDate) {

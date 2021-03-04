@@ -5,7 +5,33 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-03-01T14:40:00Z</updated>
+  <updated>2021-03-02T22:47:00Z</updated>
+  <entry>
+    <title>This Week in Spring - March 2nd, 2021</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/03/02/this-week-in-spring-march-2nd-2021" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-03-02:4377</id>
+    <updated>2021-03-02T22:47:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;ve finally managed to get my &lt;a href="https://joshlong.com/feed.html"&gt;joshlong.com/feed.html&lt;/a&gt; page working again so if you&amp;rsquo;re curious about what I&amp;rsquo;m doing, check this feed out. &lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve got a really great roundup this week, so let&amp;rsquo;s get into it.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://www.amazon.com/Spring-Boot-Running-Building-Applications-ebook/dp/B08W2QRQGQ/ref=mp_s_a_1_3?dchild=1&amp;keywords=spring+boot+up+and+running&amp;qid=1614279138&amp;sr=8-3"&gt;Check out our very own Mark Heckler’s new book “Spring Boot Up and Running”!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/25/a-bootiful-podcast-spring-legend-greg-turnquist-on-spring-data-rest-hateoas-ci-and-so-much-more"&gt;A Bootiful Podcast: Spring legend Greg Turnquist on Spring Data REST, HATEOAS, CI, and so much more.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out this first new installment of &lt;em&gt;Spring Tips&lt;/em&gt; in which I revisit &lt;a href="https://spring.io/blog/2021/02/23/spring-tips-spring-cloud-gateway-redux"&gt;Spring Cloud Gateway&lt;/a&gt;. This episode features a long, detailed look at all things Spring Cloud Gateway and features interviews with Spring Cloud cofounder and Spring Cloud Gateway creator Spencer Gibb and an interview with Spring Cloud Gateway for Kubernetes lead Chris Sterling.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/dbbaskette/status/1364684787785596940?s=12"&gt;Congrats to Jacques Chester on his new book KNative in Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://mkyong.com/java/java-custom-annotations-example/"&gt;Custom annotations with Spring&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://foojay.io/today/deploying-spring-boot-applications-on-kubernetes/"&gt;Deploying Spring Boot Application on Kubernetes &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2021/02/25/do-i-make-myself-clear/"&gt;Do I Make Myself Clear?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I dig this &lt;a href="https://www.infoq.com/articles/java-pattern-matching/"&gt;Java Feature Spotlight looking at pattern matching&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2021/02/netflix-graphql-spring-boot/"&gt;Netflix Open Sources Their Domain Graph Service Framework: GraphQL for Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/03/01/spring-integration-zip-1-0-4-cve-2021-22114"&gt;Spring Integration Zip 1.0.4 &amp;amp; CVE-2021-22114&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I love this video from RedMonk, &lt;a href="https://redmonk.com/videos/what-is-a-distributed-api-gateway/"&gt;&lt;em&gt;What is a Distributed API Gateway? How to get started with Spring Cloud Gateway for Kubernetes&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Integration Zip 1.0.4 &amp; CVE-2021-22114</title>
     <link rel="alternate" href="https://spring.io/blog/2021/03/01/spring-integration-zip-1-0-4-cve-2021-22114" />
@@ -665,227 +691,6 @@ dependencies {&#xD;
   //...&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Metrics and Tracing: Better Together</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/02/09/metrics-and-tracing-better-together" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Tommy Ludwig</name>
-    </author>
-    <id>tag:spring.io,2021-02-10:4357</id>
-    <updated>2021-02-10T03:22:00Z</updated>
-    <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;This blog post was co-authored by our very own, always excited about all things Spring, &lt;a href="https://spring.io/team/joshlong"&gt;Josh Long&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;You&amp;rsquo;ve decided to put your talents to work in the service of humanity and - in the age of the pandemic, and having no other real skills to speak of besides software - you&amp;rsquo;re going to build a web service that people can check for the availability of the highly vaunted Playstation 5 video game console, on your new website, &lt;code&gt;www.ps5ownersarebetterpeople.com.net&lt;/code&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#it-all-started-so-auspiciously-hellip" class="anchor" name="it-all-started-so-auspiciously-hellip"&gt;&lt;/a&gt;It All Started so Auspiciously&amp;hellip;&lt;/h2&gt;
-&lt;p&gt;Go to the trusty &lt;a href="https://start.spring.io"&gt;Spring Initializr&lt;/a&gt; and generate a new project (called &lt;code&gt;service&lt;/code&gt;) using the latest version of Java ( &lt;em&gt;natch!&lt;/em&gt; ) and add the &lt;code&gt;Reactive Web&lt;/code&gt;, &lt;code&gt;Wavefront&lt;/code&gt;, &lt;code&gt;Lombok&lt;/code&gt;, &lt;code&gt;Sleuth&lt;/code&gt;, and &lt;code&gt;Actuator&lt;/code&gt; dependencies to the project. Click the &lt;code&gt;Generate&lt;/code&gt; button to download a &lt;code&gt;.zip&lt;/code&gt; file containing the code for a project you should open in your favorite IDE. &lt;/p&gt;
-&lt;p&gt;Add the following configuration values to &lt;a href="https://github.com/shakuzen/console-availability/tree/master/basics/service/src/main/resources/application.properties"&gt;&lt;code&gt;application.properties&lt;/code&gt;&lt;/a&gt;. We&amp;rsquo;ll review them as they become relevant. For now, the critical thing to keep in mind is that we&amp;rsquo;re running the &lt;code&gt;service&lt;/code&gt; on port &lt;code&gt;8083&lt;/code&gt;, and we&amp;rsquo;ve given this service a name with the &lt;code&gt;spring.application.name&lt;/code&gt; property, &lt;code&gt;service&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint properties"&gt;spring.application.name=service&#xD;
-server.port=8083&#xD;
-wavefront.application.name=console-availability&#xD;
-management.metrics.export.wavefront.source=my-cloud-server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here&amp;rsquo;s &lt;a href="https://github.com/shakuzen/console-availability/blob/master/basics/service/src/main/java/server/ServiceApplication.java"&gt;the Java code&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Slf4j&#xD;
-@SpringBootApplication&#xD;
-public class ServiceApplication {&#xD;
-&#xD;
-    public static void main(String[] args) {&#xD;
-        log.info(&amp;quot;starting server&amp;quot;);&#xD;
-        SpringApplication.run(ServiceApplication.class, args);&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-@RestController&#xD;
-class AvailabilityController {&#xD;
-&#xD;
-    private boolean validate(String console) {&#xD;
-        return StringUtils.hasText(console) &amp;amp;&amp;amp;&#xD;
-               Set.of(&amp;quot;ps5&amp;quot;, &amp;quot;ps4&amp;quot;, &amp;quot;switch&amp;quot;, &amp;quot;xbox&amp;quot;).contains(console);&#xD;
-    }&#xD;
-&#xD;
-    @GetMapping(&amp;quot;/availability/{console}&amp;quot;)&#xD;
-    Map&amp;lt;String, Object&amp;gt; getAvailability(@PathVariable String console) {&#xD;
-        return Map.of(&amp;quot;console&amp;quot;, console,&#xD;
-                &amp;quot;available&amp;quot;, checkAvailability(console));&#xD;
-    }&#xD;
-&#xD;
-    private boolean checkAvailability(String console) {&#xD;
-        Assert.state(validate(console), () -&amp;gt; &amp;quot;the console specified, &amp;quot; + console + &amp;quot;, is not valid.&amp;quot;);&#xD;
-        return switch (console) {&#xD;
-            case &amp;quot;ps5&amp;quot; -&amp;gt; throw new RuntimeException(&amp;quot;Service exception&amp;quot;);&#xD;
-            case &amp;quot;xbox&amp;quot; -&amp;gt; true;&#xD;
-            default -&amp;gt; false;&#xD;
-        };&#xD;
-    }&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Given a request for a particular type of console (&lt;code&gt;ps5&lt;/code&gt;, &lt;code&gt;nintendo&lt;/code&gt;, &lt;code&gt;xbox&lt;/code&gt;, &lt;code&gt;ps4&lt;/code&gt;), the API returns the console&amp;rsquo;s availability (presumably sourced from local electronics outlets). Except for some reason, which for our demo will have to be &lt;em&gt;deus ex machina&lt;/em&gt; - there is no PlayStation 5 availability. Worse, the service itself is experiencing errors and blowing chunks every time someone even dares to inquire about the Playstation 5! We&amp;rsquo;ll use this particular code path - asking about the availability of Playstation 5&amp;rsquo;s in particular - to simulate an error in our system. Don&amp;rsquo;t judge. You&amp;rsquo;ve probably made an error at some point, too. Probably. &lt;/p&gt;
-&lt;p&gt;We want as much information as possible about individual microservices and their interactions, and we will most want that information when we&amp;rsquo;re trying to flush out bugs in the system. Let&amp;rsquo;s see how tracing and metrics can work together to provide an observability posture superior to using either metrics or tracing alone. &lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ll need a client to talk to the service and drive some traffic to it. Return to the &lt;a href="https://start.spring.io"&gt;Spring Initializr&lt;/a&gt; and generate another project precisely like the &lt;code&gt;service&lt;/code&gt;, but give this one the &lt;code&gt;spring.application.name&lt;/code&gt; value of &lt;code&gt;client&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s &lt;a href="https://github.com/shakuzen/console-availability/blob/master/basics/client/src/main/resources/application.properties"&gt;the configuration file&lt;/a&gt;. &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint properties"&gt;spring.application.name=client&#xD;
-wavefront.application.name=console-availability&#xD;
-management.metrics.export.wavefront.source=my-cloud-server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The code uses the reactive, non-blocking &lt;code&gt;WebClient&lt;/code&gt; to issue requests against the service. The entire application - both &lt;code&gt;client&lt;/code&gt; and &lt;code&gt;service&lt;/code&gt; - use reactive, non-blocking HTTP. You could just as easily use the traditional Servlet-based Spring MVC. Or you could avoid HTTP altogether and use messaging technologies. Or you could use both. Here&amp;rsquo;s &lt;a href="https://github.com/shakuzen/console-availability/blob/master/basics/client/src/main/java/client/ClientApplication.java"&gt;the Java code&lt;/a&gt;. &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Slf4j&#xD;
-@SpringBootApplication&#xD;
-public class ClientApplication {&#xD;
-&#xD;
-    public static void main(String[] args) {&#xD;
-        log.info(&amp;quot;starting client&amp;quot;);&#xD;
-        SpringApplication.run(ClientApplication.class, args);&#xD;
-    }&#xD;
-&#xD;
-    @Bean&#xD;
-    WebClient webClient(WebClient.Builder builder) {&#xD;
-        return builder.build();&#xD;
-    }&#xD;
-&#xD;
-    @Bean&#xD;
-    ApplicationListener&amp;lt;ApplicationReadyEvent&amp;gt; ready(AvailabilityClient client) {&#xD;
-        return applicationReadyEvent -&amp;gt; {&#xD;
-            for (var console : &amp;quot;ps5,xbox,ps4,switch&amp;quot;.split(&amp;quot;,&amp;quot;)) {&#xD;
-                Flux.range(0, 20).delayElements(Duration.ofMillis(100)).subscribe(i -&amp;gt;&#xD;
-                        client&#xD;
-                                .checkAvailability(console)&#xD;
-                                .subscribe(availability -&amp;gt;&#xD;
-                                        log.info(&amp;quot;console: {}, availability: {} &amp;quot;, console, availability.isAvailable())));&#xD;
-            }&#xD;
-        };&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-@Data&#xD;
-@AllArgsConstructor&#xD;
-@NoArgsConstructor&#xD;
-class Availability {&#xD;
-    private boolean available;&#xD;
-    private String console;&#xD;
-}&#xD;
-&#xD;
-@Component&#xD;
-@RequiredArgsConstructor&#xD;
-class AvailabilityClient {&#xD;
-&#xD;
-    private final WebClient webClient;&#xD;
-    private static final String URI = &amp;quot;http://localhost:8083/availability/{console}&amp;quot;;&#xD;
-&#xD;
-    Mono&amp;lt;Availability&amp;gt; checkAvailability(String console) {&#xD;
-        return this.webClient&#xD;
-                .get()&#xD;
-                .uri(URI, console)&#xD;
-                .retrieve()&#xD;
-                .bodyToMono(Availability.class)&#xD;
-                .onErrorReturn(new Availability(false, console));&#xD;
-    }&#xD;
-&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Start the &lt;code&gt;service&lt;/code&gt; application, and then start the &lt;code&gt;client&lt;/code&gt; application. The &lt;code&gt;client&lt;/code&gt; application generates a lot of demand directed at the service, some of which results in failed requests. We want to capture all of that information. &lt;/p&gt;&lt;h2&gt;&lt;a href="#a-number-by-any-other-name" class="anchor" name="a-number-by-any-other-name"&gt;&lt;/a&gt;A Number By Any Other Name&lt;/h2&gt;
-&lt;p&gt;First, we want to have an aggregate view of all the data, &lt;em&gt;metrics&lt;/em&gt;, that give us statistics about all the requests. Metrics are numbers, aggregations. Metrics can cover things like memory/thread usage, garbage collection, process metrics, etc. They also often encompass key performance indicators that the business might set, like how many orders were fulfilled, how many users authenticated, etc.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;Actuator&lt;/code&gt; starter, in turn, brings in &lt;a href="https://micrometer.io"&gt;Micrometer&lt;/a&gt;, which provides a simple facade over the instrumentation clients for the most popular monitoring systems, allowing you to instrument your JVM-based application code without vendor lock-in. Think SLF4J, but for metrics. &lt;/p&gt;
-&lt;p&gt;The most straightforward possible use of Micrometer is to capture metrics and keep them in memory, which the Spring Boot Actuator will do. You can configure your application to show those metrics under an Actuator management endpoint - &lt;code&gt;/actuator/metrics/&lt;/code&gt;. More commonly, though, you&amp;rsquo;ll want to send these metrics to a time-series database like Graphite, Prometheus, Netflix Atlas, Datadog, or InfluxDB. Time series databases store the evolving value of a metric over time, so you can see how it has changed.&lt;/p&gt;&lt;h2&gt;&lt;a href="#follow-the-data" class="anchor" name="follow-the-data"&gt;&lt;/a&gt;Follow the Data&lt;/h2&gt;
-&lt;p&gt;Danger is the snack food of a true sleuth. -Mac Barnett&lt;/p&gt;
-&lt;p&gt;We also want to have detailed breakdowns of individual requests and traces to give us context around particular failed requests. The &lt;code&gt;Sleuth&lt;/code&gt; starter brings in the &lt;a href="https://spring.io/projects/spring-cloud-sleuth"&gt;Spring Cloud Sleuth&lt;/a&gt; distributed tracing abstraction, which provides a simple facade over distributed tracing systems like OpenZipkin and Google Cloud Stackdriver Trace and Wavefront. &lt;/p&gt;
-&lt;p&gt;Micrometer and Sleuth give you the power of choice in metrics and tracing backends. We &lt;em&gt;could&lt;/em&gt; use these two different abstractions and separately stand up a dedicated cluster for our tracing and metrics aggregation systems. People do. Crazier things have happened. We&amp;rsquo;re all about the idea that you shouldn&amp;rsquo;t run what you can&amp;rsquo;t charge for, so let&amp;rsquo;s use an easy, turnkey, hosted, software-as-a-service (SaaS) offering and let someone else do that work. We don&amp;rsquo;t envy the integration task that having such highly related data living in two different, unrelated backend systems otherwise implies. &lt;/p&gt;&lt;h2&gt;&lt;a href="#to-the-observability-cave-statsman" class="anchor" name="to-the-observability-cave-statsman"&gt;&lt;/a&gt;To The Observability Cave, Statsman!&lt;/h2&gt;
-&lt;p&gt;We will use VMware Tanzu&amp;rsquo;s &lt;a href="https://tanzu.vmware.com/observability"&gt;excellent Wavefront observability platform&lt;/a&gt;, which understands both metrics and traces and can link them together for us. We already added the &lt;code&gt;Wavefront&lt;/code&gt; starter to our build.&lt;/p&gt;
-&lt;p&gt;Start the &lt;code&gt;service&lt;/code&gt; and then start the &lt;code&gt;client&lt;/code&gt;. The &lt;code&gt;client&lt;/code&gt; will generate a lot of traffic. Well, not a &lt;em&gt;lot&lt;/em&gt;. Remember, &lt;a href="https://en.wikipedia.org/wiki/Reddit"&gt;Reddit&lt;/a&gt; uses Wavefront successfully at their global scale. So, all things being equal, our data is &lt;em&gt;nothing&lt;/em&gt;. But it&amp;rsquo;s enough to see some core concepts in action. A Wavefront URL is printed out when our Spring Boot application starts up. This is the URL to access the &lt;em&gt;freemium&lt;/em&gt; Wavefront cluster. You already have a valid Wavefront configuration, and you didn&amp;rsquo;t even have to sign up for an account! It will take a minute for metrics to publish to Wavefront. Wait for a minute and then visit the URL printed in the console in your browser.&lt;/p&gt;
-&lt;p&gt;That URL dumps you into the Wavefront dashboard for Spring Boot. There&amp;rsquo;s a lot here, so we&amp;rsquo;ll focus on a few key things in particular. &lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/1.png" width = "500" /&gt;
-&lt;p&gt;You can see that Wavefront comes fully loaded with a &lt;code&gt;Spring Boot&lt;/code&gt; dashboard in the &lt;code&gt;Dashboards&lt;/code&gt; menu at the top of the screen. The top of the dashboard shows that the &lt;code&gt;Source&lt;/code&gt; is &lt;code&gt;my-cloud-server&lt;/code&gt;, which comes from the configuration property &lt;code&gt;management.&#xD;
-.export.wavefront.source&lt;/code&gt; (or use the default, which is the hostname of the machine). The &lt;code&gt;Application&lt;/code&gt; we&amp;rsquo;re interested in is &lt;code&gt;console-availability&lt;/code&gt;, which comes from the configuration property &lt;code&gt;wavefront.application.name&lt;/code&gt;. &lt;em&gt;Application&lt;/em&gt; refers to the logical group of Spring Boot microservices, not any specific one. &lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/2.png" width = "500" /&gt;
-&lt;p&gt;Click on that, and you&amp;rsquo;ll see everything about your application at a glance. You can choose to look at information for either module - &lt;code&gt;client&lt;/code&gt; or &lt;code&gt;service&lt;/code&gt;. Click &lt;code&gt;Jump To&lt;/code&gt; to navigate to a particular set of graphs. We&amp;rsquo;re interested in the data in the &lt;code&gt;HTTP&lt;/code&gt; section. &lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/4.png" width = "500" /&gt;
-&lt;p&gt;You can see a useful thing like the &lt;code&gt;Top Requests&lt;/code&gt;, the &lt;code&gt;Top Failed Requests&lt;/code&gt;, and &lt;code&gt;Top Exceptions&lt;/code&gt; encountered in the code - mouse over a particular type of request to get some details associated with each entry. You can get information like the HTTP method (&lt;code&gt;GET&lt;/code&gt;), service (&lt;code&gt;service&lt;/code&gt;), status code (&lt;code&gt;500&lt;/code&gt;), and URI (&lt;code&gt;/availability/{console}&lt;/code&gt;) associated with the failing requests.&lt;/p&gt;
-&lt;p&gt;These kinds of at-a-glance numbers are metrics. Metrics are not based on sampled data; they&amp;rsquo;re an aggregation of every single request. You should use metrics for your alerting because they ensure that you see &lt;em&gt;all&lt;/em&gt; your requests (and &lt;em&gt;all&lt;/em&gt; the errors, slow requests, etc.). Trace data, on the other hand, usually needs to be sampled at high volumes of traffic because the amount of data increases proportionally to the traffic volume.&lt;/p&gt;
-&lt;p&gt;We can see that the metrics collection has ignored the values for the &lt;code&gt;{console}&lt;/code&gt; path variable in distinguishing the requests, which means that - as far as our data is concerned - there&amp;rsquo;s only one URI (&lt;code&gt;/availability/{console}&lt;/code&gt;). This is by design. &lt;code&gt;{console}&lt;/code&gt; is a path variable we&amp;rsquo;re using to specify the console, but it could just as easily have been a user ID, an order ID, or some other thing for which there are likely many, possibly unbounded, values. It would be dangerous for the metrics system to record high cardinality metrics by default. Bounded cardinality metrics are cheap! Cost does not increase with traffic. Watch for cardinality in your metrics.&lt;/p&gt;
-&lt;p&gt;It is a little unfortunate because even though we know that &lt;code&gt;{console}&lt;/code&gt; is a low-cardinality variable - there&amp;rsquo;s a finite set of possible values - we can&amp;rsquo;t drill down into the data any further to see at a glance which paths are failing. Metrics represent aggregated statistics, so even if we broke down the metrics in terms of the &lt;code&gt;{console}&lt;/code&gt; variable, the metrics still lacks context around individual requests.&lt;/p&gt;
-&lt;p&gt;There&amp;rsquo;s always the trace data! Click on the little breadcrumb/sandwich icon to the right of the words &lt;code&gt;Top Failed Requests&lt;/code&gt;, and find the service by going to &lt;code&gt;Traces&lt;/code&gt; &amp;gt; &lt;code&gt;console-availability&lt;/code&gt;. &lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/5.png" width = "500" /&gt;
-&lt;p&gt;Here are all the traces collected for the application: good, bad, or otherwise. &lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/6.png" width = "500" /&gt;
-&lt;p&gt;Let&amp;rsquo;s drill down into only the errant requests by adding an &lt;code&gt;Error&lt;/code&gt; filter to the search. Then click &lt;code&gt;Search&lt;/code&gt;. Now we can scrutinize individual errant requests. You can see how long was taken in each service call, the relationship between services, and where the error originated.&lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/8.png" width = "500" /&gt;
-&lt;p&gt;Click on the &lt;code&gt;Expand&lt;/code&gt; icon for the panel labeled &lt;code&gt;client: GET&lt;/code&gt; in the screen&amp;rsquo;s bottom right. You can see each hop in the request&amp;rsquo;s journey: how long it took, the trace ID, the URL, and the path.&lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/9.png" width = "500" /&gt;
-&lt;p&gt;Expand the &lt;code&gt;Tags&lt;/code&gt; branch under a particular segment of the trace, and you can see the metadata collected on your behalf, automatically, by Spring Cloud Sleuth. A trace is made up of individual segments, called &lt;em&gt;spans&lt;/em&gt;, that describe one hop in the request&amp;rsquo;s journey.&lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/10.png" width = "500" /&gt;&lt;h2&gt;&lt;a href="#enriching-the-data-with-business-domain-context" class="anchor" name="enriching-the-data-with-business-domain-context"&gt;&lt;/a&gt;Enriching the Data with Business/Domain Context&lt;/h2&gt;
-&lt;p&gt;We got a lot out of the default configuration. We didn&amp;rsquo;t really do anything to the code to get the results we just saw except for adding the Spring Boot &lt;code&gt;Actuator&lt;/code&gt; starter, the &lt;code&gt;Wavefront&lt;/code&gt; starter, and the &lt;code&gt;Sleuth&lt;/code&gt; starter and starting the application. See? It was easy! Very easy. As easy as falling off a log&amp;hellip;ging-centric system and onto a real observability platform, even. We got trace information and metrics and a dashboard that we could consult for the details. We made precisely zero changes to our Java code to support any of this.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s take things a bit further and customize the metadata captured by Spring Cloud Sleuth and Micrometer to make it even easier to drill down by a domain-specific concept: the type of console requested. We can do this with the &lt;code&gt;{console}&lt;/code&gt; path variable. The code already validates that the console&amp;rsquo;s value falls within a set of well-known consoles. It is important that we validate the input before using it, which ensures the type of console is low cardinality. You should not use arbitrary input (like a path variable or query parameter) that could be high cardinality as a metric tag - though you could use high cardinality data as a trace tag. Now, instead of gleaning the type of console from the HTTP path in the trace data, we can use a tag on the metrics and traces.&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ll update the service to inject a &lt;code&gt;SpanCustomizer&lt;/code&gt; to customize the trace information. We&amp;rsquo;ll also update the service to configure a &lt;code&gt;WebFluxTagsContributor&lt;/code&gt; to customize the tags captured by Spring Boot and given to Micrometer. Here&amp;rsquo;s the &lt;a href="https://github.com/shakuzen/console-availability/blob/master/enhanced/service/src/main/java/server/ServiceApplication.java"&gt;new and updated code&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Slf4j&#xD;
-@SpringBootApplication&#xD;
-public class ServiceApplication {&#xD;
-&#xD;
-    @Bean&#xD;
-    WebFluxTagsContributor consoleTagContributor() {&#xD;
-        return (exchange, ex) -&amp;gt; {&#xD;
-            var console = &amp;quot;UNKNOWN&amp;quot;;&#xD;
-            var consolePathVariable = ((Map&amp;lt;String,String&amp;gt;) exchange.getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE)).get(&amp;quot;console&amp;quot;);&#xD;
-            if (AvailabilityController.validateConsole(consolePathVariable)) {&#xD;
-                console = consolePathVariable;&#xD;
-            }&#xD;
-            return Tags.of(&amp;quot;console&amp;quot;, console);&#xD;
-        };&#xD;
-    }&#xD;
-&#xD;
-    public static void main(String[] args) {&#xD;
-        log.info(&amp;quot;starting server&amp;quot;);&#xD;
-        SpringApplication.run(ServiceApplication.class, args);&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-@RestController&#xD;
-@AllArgsConstructor&#xD;
-class AvailabilityController {&#xD;
-&#xD;
-    private final SpanCustomizer spanCustomizer;&#xD;
-&#xD;
-    @GetMapping(&amp;quot;/availability/{console}&amp;quot;)&#xD;
-    Map&amp;lt;String, Object&amp;gt; getAvailability(@PathVariable String console) {&#xD;
-        Assert.state(validateConsole(console), () -&amp;gt; &amp;quot;the console specified, &amp;quot; + console + &amp;quot;, is not valid.&amp;quot;);&#xD;
-        this.spanCustomizer.tag(&amp;quot;console&amp;quot;, console);&#xD;
-        return Map.of(&amp;quot;console&amp;quot;, console, &amp;quot;available&amp;quot;, checkAvailability(console));&#xD;
-    }&#xD;
-&#xD;
-    private boolean checkAvailability(String console) {&#xD;
-        return switch (console) {&#xD;
-            case &amp;quot;ps5&amp;quot; -&amp;gt; throw new RuntimeException(&amp;quot;Service exception&amp;quot;);&#xD;
-            case &amp;quot;xbox&amp;quot; -&amp;gt; true;&#xD;
-            default -&amp;gt; false;&#xD;
-        };&#xD;
-    }&#xD;
-&#xD;
-    static boolean validateConsole(String console) {&#xD;
-        return StringUtils.hasText(console) &amp;amp;&amp;amp;&#xD;
-               Set.of(&amp;quot;ps5&amp;quot;, &amp;quot;ps4&amp;quot;, &amp;quot;switch&amp;quot;, &amp;quot;xbox&amp;quot;).contains(console);&#xD;
-    }&#xD;
-&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Re-run the service with the above changes and then the client (same as before), and wait a minute for metrics to be published. Then open up the Wavefront console again; use that handy link printed in the console output!&lt;/p&gt;
-&lt;p&gt;You can now see different metrics broken down by the console. Click on &lt;code&gt;Dashboards&lt;/code&gt; &amp;gt; &lt;code&gt;Spring Boot Dashboard&lt;/code&gt;, and you&amp;rsquo;ll note that the &lt;code&gt;Top Requests&lt;/code&gt; and &lt;code&gt;Top Failed Requests&lt;/code&gt; have more entries. This time, you may break down the results in terms of each console. Hover over them, and you&amp;rsquo;ll see the details. &lt;/p&gt;
-&lt;p&gt;Here are successful requests.&lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/15.png" width = "500" /&gt;
-&lt;p&gt;Here are failed requests.&lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/16.png" width = "500" /&gt;
-&lt;p&gt;It seems to us that the &lt;code&gt;ps5&lt;/code&gt; console has a high coincidence with the failed requests. Let&amp;rsquo;s look at the trace information. Click on &lt;code&gt;Applications&lt;/code&gt; &amp;gt; &lt;code&gt;Traces&lt;/code&gt;, to see the updated data. &lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/11.png" width = "500" /&gt;
-&lt;p&gt;Click on the critical path breakdown and expand the panel. Click on a particular segment, as shown here, and extend the &lt;code&gt;Tags&lt;/code&gt; branch. You&amp;rsquo;ll see all the tags associated with a particular request, including the &lt;code&gt;console&lt;/code&gt; tag. The failing request depicted was after someone requested the availability of the &lt;code&gt;ps5&lt;/code&gt; console. It&amp;rsquo;d sure be nice to filter based on the console, wouldn&amp;rsquo;t it? Click the &lt;code&gt;+&lt;/code&gt; icon next to the tag &lt;code&gt;console&lt;/code&gt;, and Wavefront will add it to the search criteria. Click &lt;code&gt;Search&lt;/code&gt; to see all the errant traces and find the culprits.&lt;/p&gt;
-&lt;img src = "https://github.com/shakuzen/console-availability/raw/master/images/12.png" width = "500" /&gt;
-&lt;p&gt;Our data breaks down both traces and metrics in terms of the console, our domain-specific concept.&lt;/p&gt;&lt;h2&gt;&lt;a href="#metrics-and-tracing-go-together-like-chicken-and-pickle-brine" class="anchor" name="metrics-and-tracing-go-together-like-chicken-and-pickle-brine"&gt;&lt;/a&gt;Metrics and Tracing Go Together like Chicken and Pickle Brine&lt;/h2&gt;
-&lt;p&gt;What? You&amp;rsquo;ve &lt;em&gt;never&lt;/em&gt; tried chicken and pickle brine? It&amp;rsquo;s good. It&amp;rsquo;s &lt;a href="https://www.eatthis.com/weird-food-combinations/"&gt;really good&lt;/a&gt;. Can you imagine how much more free time you&amp;rsquo;ll have once you&amp;rsquo;ve standardized on Spring and Wavefront and don&amp;rsquo;t have to maintain as much undifferentiated infrastructure yourself? It&amp;rsquo;s gonna be sweet. You&amp;rsquo;ll have so much time. You&amp;rsquo;ll have time enough to try chicken and pickle brine. &lt;/p&gt;
-&lt;p&gt;You have seen a concrete example of using metrics and tracing together. Let&amp;rsquo;s review some uses and anti-patterns for metrics and tracing. This hopefully makes clear why you want both metrics and tracing and how to use each for what. It may be useful to consider the framing set up in &lt;a href="https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html"&gt;Peter Bourgon&amp;rsquo;s Metrics, tracing, and logging&lt;/a&gt; blog post.&lt;/p&gt;
-&lt;p&gt;Tracing and metrics overlap in providing insight on request-scoped interactions in our services. However, some information provided by metrics and tracing is disjointed. Traces excel at showing the relationship between services as well as high-cardinality data about a specific request, such as a user ID associated with a request. Distributed tracing helps you pinpoint the source of an issue in your distributed system quickly. The tradeoff is that at high volumes and strict performance requirements, traces need to be sampled to control costs. This means that the specific request you are interested in may not be in the sampled tracing data. &lt;/p&gt;
-&lt;p&gt;On the other side of the coin, metrics aggregate all measurements and export the aggregate at time intervals to define the time series data. All data is included in this aggregation and cost does not increase with traffic, so long as best practices on tag cardinality are followed. Therefore, a metric measuring the maximum latency of something will include the slowest request, and a calculation of error rate will be accurate, regardless of any sampling on tracing data.&lt;/p&gt;
-&lt;p&gt;Metrics can be used beyond the scope of requests for monitoring memory, CPU usage, garbage collection, and caches, to name a few. You will want to use metrics for your alerting, SLOs (service-level objectives), and dashboards. In the &lt;code&gt;console-availability&lt;/code&gt; example, it would be an alert about an SLO violation that notifies us about a high error rate for our service. (You don&amp;rsquo;t want to stare at dashboards 24/7 to detect issues, do you?)&lt;/p&gt;
-&lt;p&gt;Then, with both metrics and traces, we can jump from one to the other using common metadata available in each. Both metrics and trace information support capturing arbitrary key-value pairs with the data called tags. For example, given an alert notification about high latency on an HTTP-based service (based on metrics), you could link to a search of spans (trace data) that match the alert. You would search for spans with the same service, HTTP method, HTTP URI, and that are above a duration threshold to quickly get a sampling of traces matching the alert.&lt;/p&gt;
-&lt;p&gt;In conclusion, data is better than no data, and integrated data is better than non-integrated data. Micrometer and Spring Cloud Sleuth provides a solid observability posture, out of the box, but can be configured and adapted to your business/domain&amp;rsquo;s context. And, finally, while you &lt;em&gt;could&lt;/em&gt; use Micrometer or Spring Cloud Sleuth with any number of other backends, we find Wavefront a convenient and powerful option. The code shown in the example is available from &lt;a href="https://github.com/shakuzen/console-availability"&gt;this GitHub repository&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
