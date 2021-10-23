@@ -11,30 +11,30 @@ import com.hrms.rest.application.repositories.EmployeesRepository;
 
 @Service
 public class EmployeeServices {
-	
+
 	@Autowired
 	private EmployeesRepository repository;
-	
-	public List<Employees> getAllEmployees(){
-		 return (List<Employees>) repository.findAll();
+
+	public List<Employees> getAllEmployees() {
+		return (List<Employees>) repository.findAll();
 	}
-	
-	public Employees getEmployeesById(long id){
-		 return repository.findById(id).
-				 orElseThrow(()-> new ResourceNotFoundException("User not found with id: " + id));
+
+	public Employees getEmployeesById(long id) {
+		return repository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
 	}
-	
+
 	public void deleteEmployee(long id) {
 		repository.deleteById(id);
 	}
-	
+
 	public void saveEmployee(Employees employees1) {
 		repository.save(employees1);
-		
+
 	}
 
 	public void updateEmployeesById(long id, Employees employees) {
-		Employees employees2=repository.findById(id).get(); 
+		Employees employees2 = repository.findById(id).get();
 		employees2.setAddress(employees.getAddress());
 		employees2.setAge(employees.getAge());
 		employees2.setEmail(employees.getEmail());
@@ -42,8 +42,8 @@ public class EmployeeServices {
 		employees2.setLastName(employees.getLastName());
 		employees2.setHireDate(employees.getHireDate());
 		employees2.setPhone_no(employees.getPhone_no());
-		employees2.setId(employees.getId());
+		employees2.setId(id);
 		repository.save(employees2);
-	}  
-	
+	}
+
 }

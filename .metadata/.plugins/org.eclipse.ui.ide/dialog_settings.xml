@@ -57,6 +57,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\DELL\Downloads\Java-Naive-Bayes-Classifier-master (1)\Java-Naive-Bayes-Classifier-master"/>
 			<item value="C:\Users\DELL\Downloads\spring-boot-spring-security-jwt-authentication-master\spring-boot-spring-security-jwt-authentication-master"/>
 		</list>
 	</section>

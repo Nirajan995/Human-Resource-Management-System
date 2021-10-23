@@ -1,0 +1,13 @@
+package com.hrms.rest.application.sms.configuration;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ConfigurationProperties("twilio")
+public class TwilioConfiguration {
+	private String accountSid;
+	private String;
+	private String ;
+
+}

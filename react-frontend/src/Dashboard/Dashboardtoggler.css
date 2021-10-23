@@ -1,348 +1,118 @@
-.maindiv {
+.maindiv1 {
+  height: 1000px;
   width: 100%;
-  margin-top: 0px;
-  /* min-height: 1200px;
-  background-color: aqua; */
+  background-color: #d0d0d0;
+  display: flex;
 }
-.divcomp {
-  height: 400px;
-  width: 100%;
-  background-color: rgb(252, 252, 252);
+.optionsdiv1 {
+  width: 19%;
+  background-color: #696969;
+  height: 99%;
+  margin: auto auto;
+  border-radius: 5px;
   position: relative;
-  top: 0px;
-  background-image: url("./images/prediction.jpg");
+}
+.bgdiv1 {
+  width: 80%;
+  height: 99%;
+  background-color: #818181;
+  margin: auto auto;
+  border-radius: 5px;
+  background-image: url("./images/ourbg.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom:7px ;
-}
-.mgmtsystem {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  top: 160px;
-  float: left;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-style: italic;
-  color: ivory;
-  text-shadow: 0 0 15px #000000;
-  font-size: xxx-large;
-}
-.btnscomp {
-  width: 50%;
-  height: 100%;
-  float: right;
-  padding: 10px;
-  position: relative;
-}
-
-.addbtn {
-  width: 70%;
-  height: 57px;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 25px;
-  left: 90px;
-  border-radius: 12px;
-  background-color: rgba(102, 204, 102);
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  border: 2px solid #5fb364;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.addbtn:hover {
-  background-color: white;
-  color: rgba(102, 204, 102);
-  font-weight: bolder;
-  transition: all 0.85s;
-}
-.editbtn {
-  width: 70%;
-  height: 57px;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 40px;
-  left: 90px;
-  border-radius: 12px;
-  background-color: #fbbc05;
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  border: 2px solid #cea734;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.editbtn:hover {
-  background-color: white;
-  color: #fbbc05;
-  font-weight: bolder;
-  transition: all 0.85s;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.viewbtn {
-  width: 70%;
-  height: 57px;
-  text-align: center;
-  position: relative;
-  top: 60px;
-  left: 90px;
-  padding: 15px;
-  border-radius: 12px;
-  background-color: #808080;
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  border: 2px solid #696969;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.viewbtn:hover {
-  background-color: white;
-  color: #808080;
-  font-weight: bolder;
-  transition: all 0.85s;
-}
-
-.terminatebtn {
-  width: 70%;
-  height: 57px;
-  text-align: center;
-  position: relative;
-  top: 80px;
-  left: 90px;
-  opacity: 96%;
-  border-radius: 12px;
-  background-color: #ff0000;
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  border: 2px solid rgb(179, 21, 21);
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.terminatebtn:hover {
-  background-color: white;
-  color: #ff0000;
-  font-weight: bolder;
-  transition: all 0.85s;
-}
-
-.payrolldivcomp {
-  height: 400px;
-  width: 100%;
-  background-color: greenyellow;
-  background-image: url("./images/empmgmt.jpg");
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom:7px ;
-}
-.payrollbtnscomp {
-  width: 50%;
-  height: 100%;
-  float: right;
-  padding: 10px;
-  position: relative;
-}
-.payrollcomp {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  top: 50px;
-  left: 60px;
-  float: left;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-style: italic;
-  color: ivory;
-  text-shadow: 0 0 15px #585555;
-  font-size: xxx-large;
-}
-.viewpaybtn {
-  width: 70%;
-  height: 65px;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 85px;
-  left: 90px;
-  border-radius: 8px;
-  background-color: #808080;
-  border: 2px solid #696969;
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.viewpaybtn:hover {
-  background-color: white;
-  color: #808080;
-  font-weight: bolder;
-  transition: all 0.85s;
-}
-.editpaybtn {
-  width: 70%;
-  height: 65px;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 125px;
-  left: 90px;
-  border-radius: 8px;
-  background-color: #fbbc05;
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  border: 2px solid #cea734;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.editpaybtn:hover {
-  background-color: white;
-  color: #fbbc05;
-  font-weight: bolder;
-  transition: all 0.85s;
-}
-.predictiondivcomp {
-  height: 400px;
-  width: 100%;
-  background-color: greenyellow;
-  background-image: url("./images/prdictionimg.jpg");
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom:7px ;
-}
-.predictionbtnscomp {
-  width: 50%;
-  height: 100%;
-  float: right;
-  padding: 10px;
-  position: relative;
-}
-.predictioncomp {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  top: 90px;
-  float: left;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-style: italic;
-  color: ivory;
-  text-shadow: 0 0 15px #2c2c2c;
-  font-size: xxx-large;
+  border: 1px solid #797777bb ;
+  
   
 }
-.analyzebtn {
-  width: 70%;
-  height: 65px;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 85px;
-  left: 90px;
-  border-radius: 8px;
-  background-color: rgba(102, 204, 102);
-  border: 2px solid rgb(51, 148, 51);
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.analyzebtn:hover {
-  background-color: white;
-  color: rgba(102, 204, 102);
-  font-weight: bolder;
-  transition: all 0.85s;
-}
-.predictbtn {
-  width: 70%;
-  height: 65px;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 125px;
-  left: 90px;
-  border-radius: 8px;
-  background-color: #ebd140;
-  border: 2px solid #d8c246;
-  font-size: larger;
-  font-weight: bold;
-  color: aliceblue;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
-}
-.predictbtn:hover {
-  background-color: white;
-  color: #ffd700;
-  font-weight: bolder;
-  transition: all 0.85s;
-}
-.projectdivcomp {
-  height: 400px;
+.welcomediv1 {
   width: 100%;
-  background-color: greenyellow;
-  background-image: url("./images/project-mangement-banner.jpg");
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom:7px ;
+  height: 60px;
+  display: flex;
 }
-.projectbtnscomp {
-  width: 50%;
-  height: 100%;
-  float: right;
-  padding: 10px;
-  position: relative;
-}
-.projectcomp {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  float: left;
-  top: 100px;
-  left: 50px;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-style: italic;
-  color: ivory;
-  text-shadow: 0 0 15px #2c2c2c;
-  font-size: xxx-large;
-
-}
-.addprojectbtn {
-  width: 70%;
-  height: 65px;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 85px;
-  left: 90px;
-  border-radius: 8px;
-  background-color: #808080;
-  border: 2px solid #696969;
-  font-size: larger;
-  font-weight: bold;
+.welcomeicon1 {
+  font-size: x-large;
   color: aliceblue;
-  opacity: 96%;
-  box-shadow: 3px 3px 3px 3px #00000083;
+  padding: 5px;
+  padding-left: 20px;
+  padding-top: 15px;
 }
-.addprojectbtn:hover {
-  background-color: white;
-  color: #808080;
+.welcometext1 {
+  color: aliceblue;
+  font-style: italic;
+  font-size: xx-large;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.separator1 {
+  color: #696969;
+  background-color: #474545f5;
+}
+.dashboarddiv1 {
+  width: 96%;
+  height: 50px;
+  margin: 0px auto;
+  display: flex;
+  background-color: #414040cb;
+  border-radius: 3px;
+  
+}
+.dashboardicon1 {
+  font-size: x-large;
+  color: aliceblue;
+  padding: 5px;
+  padding-left: 77px;
+}
+.dashboardtext1 {
+  color: aliceblue;
+  font-size: x-large;
+  text-align: center;
+  padding-top: 7px;
+  padding-left: 5px;
+}
+.list1 {
+  width: 97%;
+  margin: 0px auto;
+  list-style: none;
+  color: aliceblue;
+  padding:20px 10px 20px 10px;
+}
+
+.linkitem1{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  color: aliceblue;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 7px;
+  padding-left: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.linkitem1:hover{
+  background-color: #4285F4;
+  border: 2px solid  #015ff5 ;
   font-weight: bolder;
-  transition: all 0.85s;
+  color: aliceblue;
+  transition: all 0.2s;
+  border-radius: 4px;
 }
+.clock1{
+  font-size: xxx-large;
+  font-weight: 650;
+  position: relative;
+  float: right;
+  top: 35px;
+  right: 525px;
+}
+.date1{
+  font-size: x-large;
+  font-weight: 700;
+  position: relative;
+  top: 100px;
+  left:609px
+}
+

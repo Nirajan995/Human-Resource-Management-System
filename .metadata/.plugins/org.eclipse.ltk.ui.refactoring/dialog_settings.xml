@@ -9,4 +9,8 @@
 		<item key="patterns" value="*"/>
 		<item key="deleteSubPackages" value="true"/>
 	</section>
+	<section name="InferTypeArguments">
+		<item key="assumeCloneReturnsSameType" value="true"/>
+		<item key="leaveUnconstrainedRaw" value="true"/>
+	</section>
 </section>

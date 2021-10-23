@@ -1,15 +1,12 @@
 package com.hrms.rest.application.controllers;
 
-import javax.annotation.security.RolesAllowed;
-
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:8081", maxAge = 3600)
 @RestController
 @RequestMapping("/api/test")
 public class TestController {
@@ -19,15 +16,14 @@ public class TestController {
 	}
 	
 	@GetMapping("/user")
-	@PreAuthorize("hasRole('USER') or hasRole('ROLE_EMPLOYEE') or hasRole('ROLE_ADMIN')")
 	public String userAccess() {
 		return "User Content.";
 	}
 
 	@GetMapping("/mod")
 	@PreAuthorize("hasRole('EMPLOYEE')")
-	public String moderatorAccess() {
-		return "Moderator Board.";
+	public String employeeAccess() {
+		return "Employee Board.";
 	}
 
 	@GetMapping("/admin")
